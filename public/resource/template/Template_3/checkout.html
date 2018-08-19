@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- METAS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- TITLE -->
+    <title>Builder Template</title>
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="images/favicon.png"/>
+
+    <!-- LOAD MAIN CSS -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+    <!-- LOAD COLOR STYLE (OPTONAL) CSS -->
+    <link href="css/lunar.css" rel="stylesheet" type="text/css" id="colorstyle">
+
+    <!-- LOAD CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <!-- Preloader Start -->
+    <div id="preloader">
+        <i class="fa fa-spinner fa-spin preloader-animation" aria-hidden="true"></i>
+    </div>
+    <!-- Preloader End -->
+    
+    
+        <!-- HEADER START -->
+        <!--section id="header"-->
+        <!-- Fixed navbar -->
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="images/logo.png" alt="Edura - Multipurpose Website Template">
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav qw-list-item">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="bonus.html">Bonus</a></li>
+                        <li class="qw-list-default"><a href="default.html">Default</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-account>Account <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="sign-up.html">Sign Up</a></li>
+                                <li><a href="login.html">Login</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-login>My Account</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="account.html">My Account</a></li>
+                                <li><a href="change-pass.html">Change Password</a></li>
+                                <li><a href="address-book.html">Address Book</a></li>
+                                <li><a href="view-cart.html">List Cart</a></li>
+                                <li><a href="whistlist.html">Whist List</a></li>
+                                <li><a href="order-history.html">Order History</a></li>
+                                <li><a href="rewards-points.html">Rewads Points</a></li>
+                                <li><a href="transaction.html">Transaction</a></li>
+                                <li><a href="logout.php">Logout</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="view-cart.html"><i class="fa fa-shopping-cart"></i> (<span count-cart>0</span>)</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+    </header>
+        <!--/section-->
+        <!-- HEADER END -->
+
+    <!-- WRAPPER START -->
+    <div id="wrapper">
+        <!-- PAGE TITLE START -->
+        <section id="title" class="container-fluid wow fadeInDown">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <h1>Checkout</h1>
+                    </div>
+                    <div class="col-xs-6 text-right breadcrumbs">
+                        <ul class="list-inline list-unstyled">
+                            <li><a href="index.html">Home</a></li>
+                            <li>/</li>
+                            <li>Checkout</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- PAGE TITLE END -->
+
+        <style>
+            .qw-container img {
+              height: 100px;
+            }
+
+            .qw-container .row {
+              margin-bottom: 1em;
+            }
+
+            [data-adress-view] {
+              border: 1px solid #d4d4d4;
+              padding: 1em;
+              margin: 1em;
+              background: whitesmoke;
+            }
+
+            [data-address-payment] {
+              display: none;
+            }
+
+            [data-new-address-div] {
+              display: none;
+            }
+
+            [data-courier-item] {
+              display: none;
+            }
+        </style>
+
+        <!-- CONTENT START -->
+        <section id="sign-up" style="padding-top: 30px">
+            <div class="container" id="form-sign-up">
+                <div class="row" id="add">
+                    <div class="row contact-wrap">
+                    <div class="status alert alert-success" style="display: none"></div>
+
+                    <div class="col-sm-6">
+
+                      <div class="form-group" style="border: 1px solid #f2f2f2;background:#fffefe;border-radius: 0.5em;padding: 10px">
+                      <label style="font-size: larger;">Shipping Address </label>
+
+
+                      <select class="form-control" data-address-list="" data-address-shipping="">
+                        <option id="1"> bandung, Bandung, 45322 </option>
+                        <option id="3"> sumedang, Sumedang, 434242 </option>
+                      </select>
+
+                      <div style="margin: 1em;"><input type="checkbox" data-show-address> I want to use a new address</div>
+                      <select class="form-control" data-address-list="" data-address-payment="">
+                        <option id="1"> bandung, Bandung, 45322 </option>
+                        <option id="3"> sumedang, Sumedang, 434242 </option>
+                      </select>
+                    </div>
+
+                    <!--div class="form-group">
+                      <label>Select Shipping Methods</label>
+                      <select class="form-control" data-shipping-list=""></select>
+                    </div-->
+                    <template data-shipping-method></template>
+
+                    <div data-new-address-div style="border: 1px solid #f2f2f2;background:#fffefe;border-radius: 0.5em;padding: 10px;margin-bottom: 15px">
+                      <label style="font-size: larger;">New Shipping Address </label> <!-- New Addess -->
+                      <div class="form-group">
+                      <label>Company</label>
+                      <input type="text" name="company" class="form-control" id="address" data-new-company>
+                    </div> 
+
+                    <div class="form-group">
+                      <label>Address</label>
+                      <input type="text" name="address" class="form-control" id="address" data-new-address>
+                    </div>
+
+                    <div class="control-group form-group">
+                      <div class="controls">
+                        <label>Country</label>
+                        <select name="country" class="form-control" required data-validation-required-message="Please enter your country" id="country" disabled="true" data-new-country>
+                        <option value="">- Choose Country -</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="control-group form-group">
+                      <div class="controls">
+                        <label>Region</label>
+                        <select name="region" class="form-control" required data-validation-required-message="Please enter your region" id="region" data-new-region>
+                        <option value="">- Choose Region -</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="control-group form-group">
+                      <div class="controls">
+                        <label>City</label>
+                        <select name="city" class="form-control" required data-validation-required-message="Please enter your city" id="city" data-new-city>
+                        <option value="">- Choose City -</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Zip Code</label>
+                      <input type="text" name="zipcode" class="form-control" id="address" data-new-zipcode>
+                    </div> 
+                    </div> <!-- End New Address -->
+
+                    
+
+                    <div class="form-group" style="border: 1px solid #f2f2f2;background:#fffefe;border-radius: 0.5em;padding: 10px">
+                      <label>Comment</label>
+                      <textarea name="message" id="message" required="required" class="form-control" rows="5" data-comment=""></textarea>
+                    </div>
+
+                    <div class="form-group qw-container" data-container="" style="border: 1px solid #f2f2f2;background:#fffefe;border-radius: 0.5em;padding: 10px">
+                      <label style="font-size: larger;">Product List</label>
+                      <div class="row" data-item="" data-item-default>
+                        <div class="col-sm-4">
+                          <center>
+                          <img src="https://build.web.id/opencart/image/catalog/demo/apple_cinema_30.jpg" data-image="">
+                          </center>
+                        </div>
+                        <div class="col-sm-8">
+                          <table>
+                            <tr>
+                              <td>Product : </td><td><div data-name="">Apple Cinema 30"</div></td>
+                            </tr>
+                            <tr>
+                              <td>Qty : </td><td><div data-qty="">1</div></td>
+                            </tr>
+                            <tr>
+                              <td>Price : </td><td><div data-price="">100</div></td>
+                            </tr>
+                            <tr>
+                              <td>Weight (gram) : </td><td><div data-weight=""></div></td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <button id="btn-coba">Coba</button> -->
+                    <hr>
+                    <div class="form-group">
+                      <FORM id="ipg_form" name="ipg_form" action='doku/payment/payment.php' method='POST'> 
+                      <!-- TRANSACTION INFORMATION -->
+                      <input type='hidden' name='BASKET' value='' value-basket> <!-- amount,1,amount -->
+                      <input type='hidden' name='TRANSIDMERCHANT' value='' value-transid> <!-- ID Transaksi/Invoice -->
+                      <input type='hidden' name='URL' value='http://google.com' value-url>
+                      <input type='hidden' name='WORDS' value='' value-words> <!-- default -->
+                      <input type='hidden' name='PAYMENTMETHODID' value='' value-payment-id> 
+
+                      <input type="hidden" name="form_type" value="full"/>
+                      <input type='hidden' name='mall_id' value='' value-storeid> <!-- default -->
+                      <input type='hidden' name='chain_merchant' value='NA'> 
+                      <input type='hidden' name='trans_id' value='' value-transid> <!-- ID Transaksi/Invoice -->
+                      <input type='hidden' name='amount' value='' value-total-bayar> 
+                      <input type='hidden' name='currency' value='360'> 
+                      <input type='hidden' name='payment_channel' value='' value-payment-id> 
+                      <!-- END TRANSACTION INFORMATION --> 
+                      <!-- PERSONAL INFORMATION -->
+                      <input type='hidden' name='cust_name' value='' value-data-name>
+                      <input type='hidden' name='cust_email' value='' value-data-email>
+                      <input type='hidden' name='cust_phone' value='' value-data-telp>
+                      <input type="hidden" name="cust_id" value="">
+                      <input type="hidden" name="payment_token" value="">
+
+                      <input type='hidden' name='CHPHONE' value='' value-data-telp>
+                      <input type='hidden' name='CMPHONE' value='' value-data-telp>
+                      <input type='hidden' name='BIRTHDATE' value=''>
+                      <!-- END PERSONAL INFORMATION -->
+                      <!-- BILLING INFORMATION -->
+                      <input type="hidden" name="CADDRESS" value="" value-data-address>
+                      <input type='hidden' name='CZIPCODE' value="" value-data-zipcode>
+                      <input type='hidden' name='CCITY' value="" value-data-city>
+                      <input type='hidden' name='CSTATE' value="" value-data-prov>
+                      <input type='hidden' name='CCOUNTRY' value="" value-data-country>
+                      <!-- END BILLING INFORMATION -->
+                      <!-- SHIPPING INFORMATION -->
+                      <input type="hidden" name="SADDRESS" value="" value-data-s-address>
+                      <input type='hidden' name='SZIPCODE' value="" value-data-s-zipcode>
+                      <input type='hidden' name='SCITY' value="" value-data-s-city>
+                      <input type='hidden' name='SSTATE' value="" value-data-s-prov>
+                      <input type='hidden' name='SCOUNTRY' value="" value-data-s-country>
+                      <button id="btn-checkout" name="submit1" type="button" class="btn btn-primary btn-lg readmore" required="required">Accept Checkout</button>
+                      <button id="btn-checkout-2" name="submit2" type="submit" class="btn btn-primary btn-lg readmore" required="required" style="display: none;">Accept Checkout</button>
+                      </FORM>
+                      
+                    </div>
+                    </div>
+
+                    <div class="col-sm-6" data-summary="">
+
+                <div class="form-group" style="border: 1px solid #f2f2f2;background:#fffefe;border-radius: 0.5em;padding: 10px">
+                  <label style="font-size: larger;">Select Delivery Method</label>
+                  <select class="form-control" data-delivery-method="">
+                    <option value=""> - Choose Delivery Method - </option>
+                  </select>
+                  <template data-destination></template>
+                </div>
+
+                <div class="form-group" style="border: 1px solid #f2f2f2;background:#fffefe;border-radius: 0.5em;padding: 10px">
+                  <label style="font-size: larger;">Delivery Courier</label>
+                  <select class="form-control" data-delivery-courier="">
+                    <option value="0" contextmenu=""> - Choose Delivery Courier - </option>
+                  </select>
+                  <template data-delivery-courier-text></template>
+                </div>
+
+                <div class="form-group" style="border: 1px solid #f2f2f2;background:#fffefe;border-radius: 0.5em;padding: 10px">
+                  <label style="font-size: larger;">Select Payment Methods</label>
+                  <select class="form-control" data-payment-list="">
+                    <option id="free_checkout"> Free Checkout </option>
+                  </select>
+                </div>
+
+                <div class="form-group" style="border: 1px solid #f2f2f2;background:#fffefe;border-radius: 0.5em;padding: 10px" data-payment-list-method-container>
+                  <label style="font-size: larger;">Select Type Payment Methods</label>
+                  <select class="form-control" data-payment-list-method="">
+                    <option id="free_checkout"> Free Checkout </option>
+                  </select>
+                </div>
+
+                <div class="form-group" style="border: 1px solid #f2f2f2;background:#fffefe;border-radius: 0.5em; padding:10px">
+                  <label style="font-size: larger;">Summary</label>
+                  <hr>
+
+                  <div class="row">
+                    <div class="col-sm-4">Shipping Address</div>
+                    <div class="col-sm-1">:</div>
+                    <div class="col-sm-7" data-summary-address-shipping="">bandung, Bandung, 45322</div>
+                  </div>
+                  <!-- <div class="row">
+                    <div class="col-sm-4">Payment Address</div>
+                    <div class="col-sm-1">:</div>
+                    <div class="col-sm-7" data-summary-address-payment="">bandung, Bandung, 45322</div>
+                  </div> -->
+                  <div class="row">
+                    <div class="col-sm-4"> Shipping Method</div>
+                    <div class="col-sm-1">:</div>
+                    <div class="col-sm-7" data-shipping-method-code>flat</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4">Payment Methods</div>
+                    <div class="col-sm-1">:</div>
+                    <div class="col-sm-7" data-summary-payment="">Free Checkout</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4">Currency</div>
+                    <div class="col-sm-1">:</div>
+                    <div class="col-sm-7" data-summary-currency="">Rp</div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-5" style="font-size: xx-large;color: #c52d2f;">Shipping</div>
+                    <div class="col-sm-7" data-payment-shipping-price="" style="font-size: xx-large;color: #c52d2f; text-align: right;"></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-5" style="font-size: xx-large;color: #c52d2f;">Total</div>
+                    <div class="col-sm-7" data-total-price="" style="font-size: xx-large;color: #c52d2f; text-align: right;"></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-5" style="font-size: xx-large;color: #c52d2f;">Total Bayar</div>
+                    <div class="col-sm-7" data-total-bayar="" style="font-size: xx-large;color: #c52d2f; text-align: right;"></div>
+                    <template data-ongkir-text></template>
+                  </div>
+                </div>
+              </div>
+              <!--/.col-sm-6-->
+
+                  </div>
+                  <!--/.row-->
+                </div>
+            </div>
+        </section>
+        <!-- CONTENT END -->
+
+        <!-- FOOTER START -->
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="images/logo.png" alt="Logo - Web Builder Template"><br><br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. <b>Lorem ipsum dolor sit amet, consectetur adipiscing</b>.</p>
+                        <br>
+                        <ul class="list-unstyled list-inline social-icons">
+                            <li><a href="#" class="facebook"><i class="fa fa-facebook facebook"></i></a></li>
+                            <li><a href="#" class="twitter"><i class="fa fa-twitter twitter"></i></a></li>
+                            <li><a href="#" class="googleplus"><i class="fa fa-google-plus googleplus"></i></a></li>
+                            <li><a href="#" class="youtube"><i class="fa fa-youtube youtube"></i></a></li>
+                            <li><a href="#" class="linkedin"><i class="fa fa-linkedin linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>CONTACT US</h4>
+                        <p><i class="fa fa-map-pin fa-fw"></i> Graha Pos Indonesia Lantai 6 C, Jl.Banda no.30, Bandung 40115 -  Indonesia</p>
+                        <p><i class="fa fa-phone fa-fw"></i> 0804-1-808-888</p>
+                        <p><i class="fa fa-phone fa-fw"></i> +62 21 52905148</p>
+                        <p><i class="fa fa-envelope fa-fw"></i> info@qwords.com</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>PAGES</h4>
+                        <ul class="list-unstyled col-md-6">
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">HOME</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">PROFILE</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">CONTACT</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">PRODUCT</a></li>
+                        </ul>
+                        <ul class="list-unstyled col-md-6">
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">GALLERY</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">BONUS</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">OTHER</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>NEWSLETTER</h4>
+                        <p>Subscribe to our monthly newsletter and stay updated with the latest news and info.</p>
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-envelope-o"></i></div>
+                                    <input type="email_news" class="form-control" id="email_news" placeholder="Your Email Address" required>
+                                </div>
+                            </div>
+                            <div class="form-group pull-right">
+                                <button type="submit" class="btn btn-primary">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <hr>
+                    <div class="col-md-12 text-center bottom">
+                        <p>Copyright &copy; 2017 Web Builder. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- FOOTER END -->
+
+
+    </div>
+    <!-- WRAPPER END -->
+
+    <!-- back to top button -->
+    <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbo8AqPhlblo2nbndho2I8zLzr0o9Qs28"></script>
+    <script type="text/javascript" src="js/gmap.js"></script>
+
+    <!-- MAIN JS FILES REQUIRED ON ALL PAGES -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="vendor/SmoothScroll/SmoothScroll.min.js"></script>
+
+    <script src="vendor/waypoints/waypoints.min.js"></script>
+    <script src="vendor/counterup/jquery.counterup.min.js"></script>
+
+
+    <!-- HERO SLIDER-->
+    <script src="vendor/hero-slider/js/modernizr.js"></script>
+    <script src="vendor/hero-slider/js/main.js"></script>
+
+    <!-- OWL CAROUSEL -->
+    <script src="vendor/owl-carousel/owl.carousel.js"></script>
+
+    <!-- FILTERIZR -->
+    <script src="vendor/jquery/jquery.filterizr.js"></script>
+
+    <!-- EDURA JS REQUIRED ON ALL PAGES-->
+    <script src="js/edura.js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://rawgit.com/emn178/js-sha1/master/build/sha1.min.js"></script>
+
+    <script>
+    $(function () {
+
+      loadOrderPage()
+
+    })
+
+    //1
+    function getClientServiceID() {
+      return $.post('scid.txt')
+        .then(res => {
+          return JSON.parse(res)
+        })
+    }
+
+
+    //2
+    async function decodeSCID() {
+      let
+        scid = await getClientServiceID()
+
+      return {
+        cid: window.atob(scid.cid),
+        sid: window.atob(scid.layanan_id)
+      }
+    }
+
+    //3
+    async function getDataPostSCID() {
+      let
+        data = new FormData(),
+        scid = await decodeSCID()
+
+      data.append('client_id', scid.cid);
+      data.append('service_id', scid.sid);
+
+      return data
+    }
+    //4
+    async function getDataPostSCIDEncode() {
+      let
+        data = new FormData(),
+        scid = await getClientServiceID()
+
+      data.append('client_id', scid.cid);
+      data.append('service_id', scid.layanan_id);
+
+      return data
+    }
+
+    //5
+    async function getLocalSetting() {
+      return fetch('https://build.web.id/api/setting/getLocalSetting/', {
+          method: 'POST',
+          body: await getDataPostSCIDEncode()
+        })
+        .then(res => res.json())
+    }
+
+
+    //6
+    async function getAddress() {
+      let data = await getDataPostSCIDEncode()
+      data.append('customer_id', await getCustomer())
+
+      return fetch('https://build.web.id/api/customers/getAddress/', {
+          method: 'POST',
+          body: data
+        })
+        .then(res => res.json())
+        .then(res => res.data)
+    }
+
+    async function getAddressById(address_id) {
+        let scid = await getClientServiceID()
+          customer_id = await getCustomer()
+          
+      return $.post('https://build.web.id/api/customers/getAddressbyId/', {
+          client_id: scid.cid,
+          service_id: scid.layanan_id,
+          customer_id: customer_id,
+          address_id: address_id
+      }).then(res => res.data)
+    }
+
+    // 14
+    async function getArrayAddress() {
+      let addresses = await getAddress()
+      let scid = await getClientServiceID()
+      
+      return addresses.map(async adress => {
+        let new_adress = await getAdressByID(adress.city, adress.zone_id, scid.cid, scid.layanan_id)
+        
+        return {
+          id: adress.address_id,
+          fulladress: `${adress.address_1}, ${new_adress.city_name}, ${adress.postcode}`,
+          status: adress.status,
+          city: adress.city
+        }
+
+      })
+    }
+
+    //7
+    function pickComment() {
+      return $('[data-comment]').val()
+    }
+
+    //8
+    function getIP() {
+      let currentDomain = window.location.hostname
+      return fetch(`http://freegeoip.net/json/${currentDomain}`)
+        .then(res => res.json())
+        .then(res => res.ip)
+    }
+
+    async function changeFormat(number){
+        let 
+            scid = await getClientServiceID(),
+            set_setting = await getCurrency()
+
+        if(set_setting.currency_code=='IDR'){
+            number = parseInt(number).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+        }else{
+            number = (number/set_setting.currency_value).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+        }
+
+        return set_setting.currency_symbol+' '+number
+    }
+
+    //9
+    function getUserAgent() {
+      return navigator.userAgent
+    }
+
+    //10
+    async function getAcceptLanguage() {
+      var setting = await getLocalSetting()
+      return setting.data.config_language.locale
+    }
+
+    //11
+    async function getCurrency() {
+      var setting = await getLocalSetting()
+      return {
+        currency_id: setting.data.config_currency.currency_id,
+        currency_code: setting.data.config_currency.code,
+        currency_value: setting.data.config_currency.value,
+        currency_symbol: setting.data.config_currency.symbol_left
+      }
+    }
+
+    //12
+    async function pickAddressPaymentID() {
+      return $('[data-address-list]').val()
+    }
+
+    //13 
+    async function getPayment() {
+
+      let data = await getDataPostSCID()
+
+      return fetch('https://build.web.id/api/payment/data/', {
+          method: 'POST',
+          body: data
+        })
+        .then(res => res.json())
+        .then(res => res.data)
+    }
+
+    //16
+    async function getPaymentNames() {
+
+      let payments = await getPayment()
+      return payments.map(payment => {
+        return {
+          code: payment.code,
+          name: payment.name
+        }
+      })
+
+    }
+    //15
+    async function loaderAddress() {
+      let
+        datas = await getArrayAddress(),
+        dom_select = $('[data-address-list]')
+
+      dom_select.empty()
+      datas.forEach(async res => {
+        let data = await res
+        
+        if(data.status==1){
+          var isSelected = 'selected';
+        }else{
+          var isSelected = '';
+        }
+
+        $('[data-destination]').val(data.city)
+        $(dom_select).append(`<option value="${data.id}" `+isSelected+`> ${data.fulladress}  </option>`)
+      })
+      return $(dom_select).children()
+    }
+
+    //17
+    async function loaderPayment() {
+      let
+        datas = await getPaymentNames(),
+        dom_select = $('[data-payment-list]')
+
+
+      dom_select.empty()
+      datas.forEach(data => {
+        $(dom_select).append(`<option value="${data.code}"> ${data.name}  </option>`)
+      })
+      return $(dom_select).children()
+    }
+
+    async function loaderPaymentType() {
+        let payment = $('[data-payment-list]').val()
+          dom_select = $('[data-payment-list-method]')
+
+        if(payment=='doku'){
+          $('[data-payment-list-method-container]').show()
+          dom_select.empty()
+        $(dom_select).append(`<option value="15"> Credit Card  </option>`)
+        $(dom_select).append(`<option value="04"> Doku Wallet  </option>`)
+        $(dom_select).append(`<option value="01"> Mandiri Clickpay  </option>`)
+        $(dom_select).append(`<option value="05"> Convenience Store / VA Permata  </option>`)
+        return $(dom_select).children()
+        }else{
+          $('[data-payment-list-method-container]').hide()
+        }
+      
+    }
+
+    //18
+    function putAddess() {
+      let address = $('[data-address-list]').val()
+      return $('[data-adress-view]').text(address)
+    }
+
+    //19 
+    async function getCarts() {
+      let data = await getDataPostSCID()
+      data.append('customer_id', await getCustomer())
+      return fetch('https://build.web.id/api/cart/content/', {
+          method: 'POST',
+          body: data
+        })
+        .then(res => res.json())
+    }
+
+    // 24
+    async function getCartsFiltered() {
+      let response = await getCarts()
+      count = response.count
+      $('[count-cart]').text(count)
+      if(count==0){
+        swal("Cart empty!", "Silahkan pilih product!", "info")
+        .then((value) => {
+          window.location.href = "product.html";
+        });
+      }else{
+        return response.data.map(cart => {
+          return {
+            name: cart.product_detail.name,
+            image: cart.product_detail.image,
+            qty: cart.quantity,
+            weight: cart.product_detail.weight,
+            total_price: cart.total_price,
+            weight: cart.weight_in_gram
+          }
+        })
+      }
+    }
+
+    // 20
+    function getCloner() {
+      let clone = $("[data-item-default]").clone()
+      return clone.removeAttr('data-item-default')
+    }
+
+    // 21 
+    async function modifiedCloner() {
+      let arrayOfCarts = await getCartsFiltered()
+
+      let carts_dom = []
+      set_setting = await getCurrency()
+
+      arrayOfCarts.forEach(async cart => {
+        let cloner = getCloner()
+
+        if (set_setting.currency_code == 'IDR') {
+          price = parseInt(cart.total_price).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+        } else {
+          price = (cart.total_price / set_setting.currency_value).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+        }
+
+        cloner.find('[data-name]').html(cart.name)
+        cloner.find('[data-image]').attr('src', cart.image)
+        cloner.find('[data-price]').text(set_setting.currency_symbol+' '+price)
+        cloner.find('[data-qty]').text(cart.qty)
+        cloner.find('[data-weight]').text(parseInt(cart.weight))
+
+        carts_dom.push(cloner)
+      })
+      return carts_dom
+    }
+
+    // 22
+    async function putCartDOMs() {
+      let carts_dom = await modifiedCloner()
+
+      $('[data-container]').empty()
+      carts_dom.forEach(dom => {
+        $('[data-container]').append(dom)
+      })
+
+      return $('[data-container]').children()
+    }
+
+    // 23
+
+    async function putTotalPrice() {
+      let carts = await getCarts()
+      set_setting = await getCurrency()
+      ongkir = parseInt($('[data-delivery-courier]').val())
+      shipping_method_name = $('[data-delivery-method] option:selected').text()+'- '+$('[data-delivery-courier] option:selected').attr('contextmenu')
+      delivery_courier = $('[data-delivery-courier-text]').text(shipping_method_name)
+      $('[data-shipping-method-code]').text(shipping_method_name)
+      total_bayar = ongkir+carts.total
+      $('[data-ongkir-text]').text(ongkir)
+      //-------------TAMPIL DI FROM---------------------------------------------------------------------------------
+      value_basket = 'Basket,'+total_bayar+'.00,1,'+total_bayar+'.00;'
+      value_total_bayar = total_bayar+'.00'
+      //value_transid = '000001'
+      value_payment_id = $('[data-payment-list-method] option:selected').val()
+    
+
+      $('[value-basket]').val(value_basket)
+      $('[value-total-bayar]').val(value_total_bayar)
+      //$('[value-transid]').val(value_transid)
+      $('[value-payment-id]').val(value_payment_id)
+      //------------------------------------------------------------------------------------------------------------      
+
+      if (set_setting.currency_code == 'IDR') {
+        total = parseInt(carts.total).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+        total_bayar = parseInt(total_bayar).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+      } else {
+        total = (carts.total / set_setting.currency_value).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+        total_bayar = (total_bayar / set_setting.currency_value).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+      }
+      
+      $('[data-total-bayar]').text(set_setting.currency_symbol + ' ' + total_bayar)
+      return $('[data-total-price]').text(set_setting.currency_symbol + ' ' + total)
+    }
+
+    async function getDeliveryMethod(){
+      let scid = await getClientServiceID()
+          carts = await getCarts()
+        //shipping method
+        free_shipping = await getShippingByCode(scid.cid,scid.layanan_id,"free")
+        digital_shipping = await getShippingByCode(scid.cid,scid.layanan_id,"digital")
+
+      total_cart = parseInt(carts.total)
+      if(total_cart>=free_shipping.free_total){ //total cart >= jumlah free total
+        $('[data-payment-shipping-price]').text("Rp 0.00")
+        $('[data-delivery-method]').empty()
+        $('[data-delivery-method]').append(`<option value="free" selected>Free</option>`)
+        $('[data-delivery-courier]').empty()
+        $('[data-delivery-courier]').append(`<option value="free" selected>Free</option>`)
+      }else{
+        //cek digital_shipping
+        var courier = digital_shipping.digital_courier
+        courier = courier.replace("[","")
+        courier = courier.replace("]","")
+        courier = courier.toString().replace(/"/g, '')
+        courier = courier.split(",")
+
+        $('[data-delivery-method]').empty();
+        courier.forEach(courier => {
+          var low_courier = courier.toLowerCase()
+          let dom = $('[data-delivery-method]').append(
+          `<option value="${low_courier}" name="delivery">  ${courier} </option>`)
+          return dom.children()
+        })
+      }
+    }
+
+    async function getPaymentByCode(){
+      let scid = await getClientServiceID()
+        return $.post('https://build.web.id/api/setting/getPaymentByCode/', {
+          client_id: scid.cid,
+          service_id: scid.layanan_id,
+          code: 'doku'
+        }).then(res => res.data)
+    }
+
+    async function getProvinceById(province){
+      let scid = await getClientServiceID()
+        return $.post('https://build.web.id/api/customers/getProvinceName/', {
+          client_id: scid.cid,
+          service_id: scid.layanan_id,
+          province: province
+        }).then(res => res.data.province)
+    }
+
+    async function getCountryById(country){
+      let scid = await getClientServiceID()
+        return $.post('https://build.web.id/api/customers/getCountryById/', {
+          client_id: scid.cid,
+          service_id: scid.layanan_id,
+          country_id: country
+        }).then(res => res.data[0].name)
+    }
+
+    async function getOngkir(){
+      let scid = await getClientServiceID()
+        carts = await getCarts()
+
+        digital_shipping = await getShippingByCode(scid.cid,scid.layanan_id,"digital")
+
+        address_id = $('[data-address-shipping] option:selected').val()
+        address = await getAddressById(address_id)
+        city_name = await getAdressByID(address.city,address.zone_id,scid.cid,scid.layanan_id)
+        
+        $('[value-data-address]').val(address.address_1)
+        $('[value-data-zipcode]').val(address.postcode)
+        $('[value-data-city]').val(city_name.city_name)
+        $('[value-data-prov]').val(await getProvinceById(address.zone_id))
+        $('[value-data-country]').val(await getCountryById(address.country_id))
+
+        $('[value-data-s-address]').val(address.address_1)
+        $('[value-data-s-zipcode]').val(address.postcode)
+        $('[value-data-s-city]').val(city_name.city_name)
+        $('[value-data-s-prov]').val(await getProvinceById(address.zone_id))
+        $('[value-data-s-country]').val(await getCountryById(address.country_id))
+
+        from_city = digital_shipping.digital_store_city_id;
+        destination = address.city;
+        weight = Math.round(carts.weight_in_gram_total);
+
+        courier_selected = $('[data-delivery-method] option:selected').val();
+        shipping_cost = await getShippingCost(scid.cid,scid.layanan_id,from_city,destination,weight,courier_selected);
+
+        if(shipping_cost!='free'){
+          $('[data-shipping-method]').val('digital')
+          if(shipping_cost.length==1){
+            $('[data-delivery-courier]').empty()
+            $('[data-delivery-courier]').append('<option value="0"> - Choose Delivery Courier - </option>')
+            shipping_cost.forEach(shipping => {
+              delivery_cost = shipping.costs
+              delivery_cost.forEach(async delivery_cost => {
+                delivery_value = await changeFormat(delivery_cost.cost[0].value)
+                let dom = $('[data-delivery-courier]').append(
+                `<option value="${delivery_cost.cost[0].value}" name="delivery" contextmenu="${delivery_cost.description}">  ${delivery_cost.service} - Price ${delivery_value} - Estimate ${delivery_cost.cost[0].etd} </option>`)
+                return dom.children()
+              });     
+            });
+          }else{
+            $('[data-shipping-method]').val('free')
+            $('[data-delivery-courier]').empty()
+            $('[data-delivery-courier]').append(`<option value="0" selected>`+shipping_cost+`</option>`)
+          }
+          
+        }else{
+          $('[data-shipping-method]').val('free')
+          $('[data-delivery-courier]').empty()
+          $('[data-delivery-courier]').append(`<option value="free" selected>Free</option>`)
+        }
+    }
+
+    async function getOngkirOtherAddress(){
+      let scid = await getClientServiceID()
+        carts = await getCarts()
+        customers = await getCustomerById()
+
+        digital_shipping = await getShippingByCode(scid.cid,scid.layanan_id,"digital")
+
+        address_id = customers.address_id
+        address = await getAddressById(address_id)
+        city_name = await getAdressByID(address.city,address.zone_id,scid.cid,scid.layanan_id)
+
+        new_address = $('[data-new-address]').val()
+        new_country = $('[data-new-country]').val()
+        new_region = $('[data-new-region]').val()
+        new_city = $('[data-new-city]').val()
+        new_city_name = await getAdressByID(new_city,new_region,scid.cid,scid.layanan_id)
+        new_zipcode = $('[data-new-zipcode]').val()
+        
+        $('[value-data-address]').val(address.address_1)
+        $('[value-data-zipcode]').val(address.postcode)
+        $('[value-data-city]').val(city_name.city_name)
+        $('[value-data-prov]').val(await getProvinceById(address.zone_id))
+        $('[value-data-country]').val(await getCountryById(address.country_id))
+
+        $('[value-data-s-address]').val(new_address)
+        $('[value-data-s-zipcode]').val(new_country)
+        $('[value-data-s-city]').val(new_city_name.city_name)
+        $('[value-data-s-prov]').val(await getProvinceById(new_region))
+        $('[value-data-s-country]').val(await getCountryById(new_country))
+
+        from_city = digital_shipping.digital_store_city_id;
+        destination = new_city;
+        weight = Math.round(carts.weight_in_gram_total);
+
+        courier_selected = $('[data-delivery-method] option:selected').val();
+        shipping_cost = await getShippingCost(scid.cid,scid.layanan_id,from_city,destination,weight,courier_selected);
+        
+        if(shipping_cost!='free'){
+
+          if(shipping_cost.length==1){
+            $('[data-delivery-courier]').empty()
+            $('[data-delivery-courier]').append('<option value="0"> - Choose Delivery Courier - </option>')
+            shipping_cost.forEach(shipping => {
+              delivery_cost = shipping.costs
+              delivery_cost.forEach(async delivery_cost => {
+                delivery_value = await changeFormat(delivery_cost.cost[0].value)
+                let dom = $('[data-delivery-courier]').append(
+                `<option value="${delivery_cost.cost[0].value}" name="delivery" contextmenu="${delivery_cost.description}">  ${delivery_cost.service} - Price ${delivery_value} - Estimate ${delivery_cost.cost[0].etd} </option>`)
+                return dom.children()
+              });     
+            });
+          }else{
+            $('[data-delivery-courier]').empty()
+            $('[data-delivery-courier]').append(`<option value="0" selected>`+shipping_cost+`</option>`)
+          }
+          
+        }else{
+          $('[data-delivery-courier]').empty()
+          $('[data-delivery-courier]').append(`<option value="free" selected>Free</option>`)
+        }
+    }
+
+    // 25 
+    async function changeSummary() {
+      let stateCheckbox = $('[data-show-address]').is(":checked")
+          payment_code = await getPaymentByCode()
+
+      let
+        summary_dom = $('[data-summary]'),
+        address_shipping = $('[data-address-shipping] option:selected').text(),
+        //address_payment = stateCheckbox ? $('[data-address-payment] option:selected').text() : address_shipping,
+        payment = $('[data-payment-list]').val(),
+        currency = await getCurrency(),
+        currencyID = currency.currency_code,
+        shipping = $('[data-shipping-list]').text()
+        shipping_val = $('[data-shipping-list]').val()
+
+        payment_text = $('[data-payment-list] option:selected').text()
+        type_payment = $('[data-payment-list-method] option:selected').text()
+
+        $('[value-storeid]').val(payment_code.doku_store_id)
+
+        courier_price = $('[data-delivery-courier] option:selected').val()
+        summary_dom.find('[data-payment-shipping-price]').text(await changeFormat(courier_price))
+
+        putTotalPrice()
+        summary_dom.find('[data-summary-address-shipping]').text(address_shipping)
+        //summary_dom.find('[data-shipping-method-code]').text(shipping_method)
+        summary_dom.find('[data-summary-payment]').text(payment_text+' - '+type_payment)
+        summary_dom.find('[data-shipping]').text(shipping)
+        summary_dom.find('[data-summary-currency]').text(currencyID)
+
+        return summary_dom
+    }
+
+    // 26 
+
+    function showAdditionalAdress() {
+      let stateCheckbox = $('[data-show-address]').is(":checked")
+
+      if (stateCheckbox) {
+        //$('[data-address-payment]').show()
+        $('[data-new-address-div]').show()
+        $('[data-address-shipping]').hide()
+      } else {
+        //$('[data-address-payment]').hide()
+        $('[data-new-address-div]').hide()
+        $('[data-address-shipping]').show()
+      }
+
+      return stateCheckbox
+    }
+
+    // 27
+
+    async function makeOrderRequest() {
+      var
+        scid_endcode = await getClientServiceID()
+        scid = await decodeSCID(),
+        currency = await getCurrency(),
+
+        stateCheckbox = $('[data-show-address]').is(":checked")
+        if(stateCheckbox){
+          new_company = $('[data-new-company]').val()
+          new_address = $('[data-new-address]').val()
+          new_country = $('[data-new-country]').val()
+          new_region = $('[data-new-region]').val()
+          new_city = $('[data-new-city]').val()
+          new_zipcode = $('[data-new-zipcode]').val()
+          
+          address_id_shipping = await addNewAddress(new_company,new_address,new_country,new_region,new_city,new_zipcode)
+        }else{
+          address_id_shipping = $("[data-address-shipping] option:selected").val()
+        }
+        
+        address_id_payment = stateCheckbox ? $("[data-address-payment] option:selected").val() : address_id_shipping,
+        payment_method = $('[data-payment-list]').val(),
+        payment_method_name = $("[data-payment-list] option:selected").text(),
+        comment = pickComment(),
+        currency_id = currency.currency_id,
+        currency_code = currency.currency_code,
+        currency_value = currency.currency_value,
+        ip = await getClientIP(),
+        user_agent = getUserAgent(),
+        accept_language = await getAcceptLanguage(),
+        shipping_method = $('[data-shipping-method]').val(),
+        shipping_method_name = $('[data-delivery-courier-text]').text(),
+        shipping_method_value = $('[data-ongkir-text]').text()
+        transidmerchant = $('[value-transid]').val()
+        //totalamount = $('[value-total-bayar]').val()
+        words = $('[value-words]').val()
+        payment_channel = $('[value-payment-id]').val()
+        value_total_bayar = $('[value-total-bayar]').val()
+        value_payment_id = $('[value-payment-id]').val()
+        payment_code = await getPaymentByCode()
+        
+      var data = {
+        client_id: scid.cid,
+        service_id: scid.sid,
+        customer_id: await getCustomer(),
+        address_id_payment: parseInt(address_id_payment),
+        address_id_shipping: parseInt(address_id_shipping),
+        shipping_method: shipping_method,
+        shipping_method_name: shipping_method_name,
+        shipping_method_value: shipping_method_value,
+        payment_method: payment_method,
+        payment_method_name: payment_method_name,
+        comment: comment,
+        currency_id: parseInt(currency_id),
+        currency_code: currency_code,
+        currency_value: parseFloat(currency_value),
+        forwarded_ip: "",
+        ip: ip,
+        user_agent: user_agent,
+        accept_language: accept_language
+      }
+
+      //Fungsi untuk create order
+      $.post('https://build.web.id/api/order/add/', data)
+      .done(res => {
+          //console.log(res)
+      })
+      .then(res => {
+        transidmerchant = res.return.invoice_no
+        $('[value-transid]').val(transidmerchant)
+        value_key = payment_code.doku_shared_key
+        value_words = sha1(value_total_bayar+value_key+transidmerchant)
+        $('[value-words]').val(value_words)
+
+        //insert ke tabel doku
+        $.post('https://build.web.id/api/customers/insertDoku/ ',{
+          "client_id": scid_endcode.cid,
+          "service_id": scid_endcode.layanan_id,
+          "transidmerchant": transidmerchant,
+          "totalamount": value_total_bayar,
+          "words": value_words,
+          "payment_channel": value_payment_id
+        },
+        function(data){
+          $('#btn-checkout-2').trigger("click");
+        })
+      })
+    }
+
+    async function addNewAddress(company,address,country_id,zone_id,city_ad,postcode){
+      let scid = await getClientServiceID(),
+          customer_id = await getCustomer(),
+          customers = await getCustomerById()
+      return $.post('https://build.web.id/api/customers/addAddressCustomer/', {
+          "client_id": scid.cid,
+          "service_id": scid.layanan_id,
+          "customer_id": customer_id,
+          "firstname_ad": customers.firstname,
+          "lastname_ad": customers.lastname,
+          "company_ad": company,
+          "address_ad": address,
+          "city_ad": city_ad,
+          "postalcode_ad": postcode,
+          "country_ad": country_id,
+          "region_ad": zone_id
+      }).then(res => res.data)
+    }
+
+    //28
+    async function getShipping() {
+      let data = await getDataPostSCID()
+
+      return fetch('https://build.web.id/api/shipping/data/', {
+          method: "POST",
+          body: data
+        })
+        .then(res => {
+          return res.json()
+        })
+        .then(res => res.data)
+    }
+
+    // 29
+    async function loadShipping() {
+      let shippings = await getShipping()
+
+      shippings.forEach(shipping => {
+        let dom = $('[data-shipping-list]').append(
+          //`<option value="${shipping.cost}" name=${shipping.key}>  ${shipping.name} </option>`)
+          `<option value="${shipping.code}" name="shipping">  ${shipping.name} </option>`)
+        return dom.children()
+      });
+    }
+
+    function getCustomer() {
+      return $.post('getdata.php').then(function (customer_id) {
+        return customer_id
+      })
+    }
+
+    function getClientIP() {
+      return $.post('https://build.web.id/editor/builder-editor/server-side/get-client-IP.php')
+    }
+
+
+    async function getAdressByID(city, province, cid, sid) {
+      return $.post('https://build.web.id/api/customers/getCityName/', {
+          client_id: cid,
+          service_id: sid,
+          province: province,
+          city: city
+        })
+        .then(res => res.data)
+    }
+
+    async function getCustomerById() {
+      let scid = await getClientServiceID()
+          customer_id = await getCustomer()
+      return $.post('https://build.web.id/api/customers/getCustomerdatabyId/', {
+          client_id: scid.cid,
+          service_id: scid.layanan_id,
+          customer_id: customer_id
+        }).then(res => res.data)
+    }
+
+    async function loadCustomerById() {
+      let customers = await getCustomerById()
+
+        $('[data-login]').html(customers.firstname+' '+customers.lastname+' <b class="caret"></b>')
+        $('[data-account]').hide()
+
+        $('[value-data-name]').val(customers.firstname+' '+customers.lastname)
+        $('[value-data-email]').val(customers.email)
+        $('[value-data-telp]').val(customers.telephone)
+    }
+
+    async function getZoneAddress(){
+      let obj = await getClientServiceID()
+              //get select country
+              $.post("https://build.web.id/api/customers/getCountry/",{
+                  client_id: obj.cid,
+                  service_id: obj.layanan_id
+              },
+              function(data,status){
+                var len = data.data.length;
+                for (var i = 0; i < len; i++) {
+                  if(data.data[i]['country_id']==100){
+                    var select = 'selected';
+                  }else{
+                    var select = '';
+                  }
+                  $('#country').append("<option value="+data.data[i]['country_id']+" "+select+">"+data.data[i]['name']+"</option>");
+                }
+              });
+
+              //get select prov
+              $.post("https://build.web.id/api/Qwords_Shipping/getProvince/",{
+                  client_id: obj.cid,
+                  service_id: obj.layanan_id
+              },
+              function(data){
+                  var len = data.data.length;
+                  for (var i = 0; i < len; i++) {
+                      $('#region').append("<option value="+data.data[i]['province_id']+">"+data.data[i]['province']+"</option>");
+                  }
+              });
+
+              $('#region').change(function(){
+                  var province_id = $('#region').val();
+                  var address_new = $('#address').val();
+
+                  $('[data-summary-address-shipping]').text(address_new+' '+province_id)
+
+                  //get select region
+                  $.post("https://build.web.id/api/Qwords_Shipping/getCityOfProvince/",{
+                      client_id: obj.cid,
+                      service_id: obj.layanan_id,
+                      province: province_id
+                  },
+                  function(data,status){
+                      var len = data.data.length;
+                      $('#city').empty();
+                      for (var i = 0; i < len; i++) {
+                          $('#city').append("<option value="+data.data[i]['city_id']+">"+data.data[i]['type']+" "+data.data[i]['city_name']+"</option>");
+                      }
+                  });
+              });
+    }
+
+    async function getShippingByCode(cid,sid,code){
+      return $.post('https://build.web.id/api/setting/getShippingByCode/', {
+          client_id: cid,
+          service_id: sid,
+          code: code
+      }).then(res => res.data)
+    }
+
+    async function getShippingCost(cid,sid,origin,destination,weight,courier){
+      return $.post('https://build.web.id/api/Qwords_Shipping/getCost/', {
+          client_id: cid,
+          service_id: sid,
+          origin: origin,
+          destination: destination,
+          weight: weight,
+          courier: courier
+      }).then(res => {
+          /*if(res.status==false){
+            return 'free';
+          }else{
+            return res.data
+          }*/
+          return res.data
+      })
+    }
+
+    // implementation
+    async function loadOrderPage() {
+      let dom_address = $('[data-address-list]')
+      let dom_payment = $('[data-payment-list]')
+      let dom_shipping = $('[data-shipping-list]')
+      let dom_delivery = $('[data-delivery-method]')
+      let dom_courier = $('[data-delivery-courier]')
+      let dom_add_button = $('[data-add-order]')
+      let dom_cekbox = $('[data-show-address]')
+      let dom_payment_type = $('[data-payment-list-method]')
+      let dom_address_city = $('[data-new-city]')
+      let dom_new_s_zipcode = $('[data-new-zipcode]')
+
+      let customer_id = await getCustomer()
+
+      if (!customer_id) {
+        $('[data-login]').hide()
+        $('[data-account]').show()
+        swal("Anda belum login!", "Silahkan login terlebih dahulu!", "info")
+        .then((value) => {
+          window.location.href = "login.html";
+        });
+      }
+
+      await loaderAddress()
+      await loaderPayment()
+      await loadShipping()
+      await putCartDOMs()
+      loadCustomerById()
+      getZoneAddress()
+      getDeliveryMethod()
+      getOngkir()
+      loaderPaymentType()
+      changeSummary()
+
+      dom_address.change(async function (e) {
+        changeSummary()
+        getDeliveryMethod()
+        getOngkir()
+      })
+
+      dom_payment.change(async function (e) {
+        changeSummary()
+        loaderPaymentType()
+      })
+
+      dom_delivery.change(async function (e) {
+        changeSummary()
+        getOngkir()
+      })
+
+      dom_courier.change(async function (e) {
+        changeSummary()
+      })
+
+      dom_shipping.change(async function (e) {
+        changeSummary()
+      })
+
+      dom_cekbox.change(async function (e) {
+        showAdditionalAdress()
+        changeSummary()
+      })
+
+      dom_payment_type.change(async function (e) {
+        payment_type = $('[data-payment-list-method] option:selected').val()
+        $('[value-payment-id]').val(payment_type)
+      })
+
+      dom_address_city.change(async function (e) {
+        checkbox = $('[data-show-address]').is(":checked")
+        if(checkbox){
+          getDeliveryMethod()
+          getOngkirOtherAddress()
+        }
+      })
+
+      dom_new_s_zipcode.change(async function (e) {
+        new_zipcode = $('[data-new-zipcode]').val()
+        $('[value-data-s-zipcode]').val(new_zipcode)
+      })
+
+      //$("#ipg_form").submit(function(event) {
+      $("#btn-checkout").click(function() {
+        new_company = $('[data-new-company]').val()
+        new_address = $('[data-new-address]').val()
+        new_country = $('[data-new-country]').val()
+        new_region = $('[data-new-region]').val()
+        new_city = $('[data-new-city]').val()
+        new_zipcode = $('[data-new-zipcode]').val()
+
+        checkbox = $('[data-show-address]').is(":checked")
+        if(checkbox){
+          if(new_company==""){
+            swal("Warning..!","New Address Shipping empty","error")
+            return false
+          }else if(new_address==""){
+            swal("Warning..!","New Address Shipping empty","error")
+            return false
+          }else if(new_country==""){
+            swal("Warning..!","New Country Address Shipping empty","error")
+            return false
+          }else if(new_region==""){
+            swal("Warning..!","New Region Address Shipping empty","error")
+            return false
+          }else if(new_city==""){
+            swal("Warning..!","New City Address Shipping empty","error")
+            return false
+          }else if(new_zipcode==""){
+            swal("Warning..!","New Zipcode Address Shipping empty","error")
+            return false
+          }
+        }
+
+        //cek pilih ongkos kirim kurir
+        courier = $('[data-delivery-courier]').val()
+        if(courier==0){
+          swal("Warning..!","Delivery courier harus dipilih","error")
+          return false
+        }
+        
+        makeOrderRequest() 
+        //tinggal ditambahin add new address jika costumer menginputkan address new shipping
+      });
+
+      $('#btn-coba').click(async function (e) {
+        makeOrderRequest()
+      });
+  }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
+
+	<title>Web Builder Template</title>
+
+	<link rel="shortcut icon" href="assets/images/favicon.png">
+
+	<!-- Bootstrap -->
+	<link href="assets/css/bootstrap.no-icons.min.css" rel="stylesheet">
+	<!-- Icons -->
+	<link href="assets/css/font-awesome.css" rel="stylesheet">
+	<!-- Fonts -->
+	<link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="assets/css/styles.css">
+
+	<!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
+</head>
+<body>
+
+<header id="header">
+	<div id="head" class="parallax qw-section" parallax-speed="2">
+		<h1 id="logo" class="text-center" style="color: white;">
+			<span class="title">Our Product</span>
+			<span class="tagline">Example Tagline<br>
+				<a href="#">example.blabla@example.com</a></span>
+		</h1>
+	</div>
+	<nav class="navbar navbar-default navbar-sticky" style="margin-bottom: 0px">
+		<div class="container-fluid">
+
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+			</div>
+
+			<div class="navbar-collapse collapse">
+
+				<ul class="nav navbar-nav qw-list-item">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="profile.html">Profile</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="product.html">Product</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+					<li class="qw-list-default"><a href="default.html">Default</a></li>
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-account>Account<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="sign-up.html">Sign Up</a></li>
+							<li><a href="login.html">Login</a></li>
+						</ul>
+					</li>
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-login>My Account<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="account.html">My Account</a></li>
+							<li><a href="change-pass.html">Change Password</a></li>
+							<li><a href="address-book.html">Address Book</a></li>
+							<li><a href="view-cart.html">List Cart</a></li>
+							<li><a href="whistlist.html">Whist List</a></li>
+							<li><a href="order-history.html">Order History</a></li>
+							<li><a href="rewards-points.html">Rewards Points</a></li>
+							<li><a href="transactions.html">Transactions</a></li>
+						</ul>
+					</li>
+				</ul>
+
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+</header>
+
+<main id="main">
+	<section class="row bottom" id="product">
+		<div class="container col-md-12" style="padding-top: 50px;">
+			<div>
+		        <div class="form-group">
+		            <label>Search Product</label>
+		            <input type="text" class="form-control" style="
+		            display: inline-block;
+		            width: 70%;
+		            margin-left: 2em;
+		            margin-right: 1em;
+		        	" data-text-search>
+		            <button type="submit" class="btn btn-default" data-search="">Search</button>
+		        </div>
+		    </div>
+
+		    <div> Filter By:
+		        <div class="radio">
+		            <label>
+		                <input type="radio" name="filter" value="pd.name" checked="">Name</label>
+		            <label>
+		                <input type="radio" name="filter" value="p.price">Price</label>
+		        </div>
+		        <div class="radio">
+		            <label>
+		                <input type="radio" name="orderby" value="ASC" checked="">Ascending</label>
+		            <label>
+		                <input type="radio" name="orderby" value="DESC">Descending</label>
+		        </div>
+			</div>
+			<input type="hidden" id="rowpage" name="rowpage" value="0" data-text-row-page>
+		</div>
+		<div class="container" data-product-container>
+	        <div class="col-md-4" data-default-item>
+	            <div class="product-item">
+	              <div class="pi-img-wrapper" style="position: relative; width: 100%; height:200px;">
+	                	<center><img src="http://placehold.it/600x550" class="img-responsive" alt="Berry Lace Dress" data-image class="img-responsive" style="max-height: 200px"></center>
+	                <div>
+	                  <a href="#" class="btn" data-link>View</a>
+	                </div>
+	              </div>
+	              <h3><a href="shop-item.html" data-title>Berry Lace Dress</a></h3>
+	              <div class="pi-price" data-price>$29.00</div>
+	              <a href="javascript:;" class="btn btn-primary pull-right" data-add>Add to cart</a>
+	            </div>
+	        </div>
+	        <div class="col-md-4">
+	            <div class="product-item">
+	              <div class="pi-img-wrapper">
+	                <img src="http://placehold.it/600x550" class="img-responsive" alt="Berry Lace Dress">
+	                <div>
+	                  <a href="#" class="btn">View</a>
+	                </div>
+	              </div>
+	              <h3><a href="shop-item.html">Berry Lace Dress</a></h3>
+	              <div class="pi-price">$29.00</div>
+	              <a href="javascript:;" class="btn btn-primary pull-right">Add to cart</a>
+	            </div>
+	        </div>
+	        <div class="col-md-4">
+	            <div class="product-item">
+	              <div class="pi-img-wrapper">
+	                <img src="http://placehold.it/600x550" class="img-responsive" alt="Berry Lace Dress">
+	                <div>
+	                  <a href="#" class="btn">View</a>
+	                </div>
+	              </div>
+	              <h3><a href="shop-item.html">Berry Lace Dress</a></h3>
+	              <div class="pi-price">$29.00</div>
+	              <a href="javascript:;" class="btn btn-primary pull-right">Add to cart</a>
+	            </div>
+	        </div>
+	        <div class="col-md-4">
+	            <div class="product-item">
+	              <div class="pi-img-wrapper">
+	                <img src="http://placehold.it/600x550" class="img-responsive" alt="Berry Lace Dress">
+	                <div>
+	                  <a href="#" class="btn">View</a>
+	                </div>
+	              </div>
+	              <h3><a href="shop-item.html">Berry Lace Dress</a></h3>
+	              <div class="pi-price">$29.00</div>
+	              <a href="javascript:;" class="btn btn-primary pull-right">Add to cart</a>
+	            </div>
+	        </div>
+	        <div class="col-md-4">
+	            <div class="product-item">
+	              <div class="pi-img-wrapper">
+	                <img src="http://placehold.it/600x550" class="img-responsive" alt="Berry Lace Dress">
+	                <div>
+	                  <a href="#" class="btn">View</a>
+	                </div>
+	              </div>
+	              <h3><a href="shop-item.html">Berry Lace Dress</a></h3>
+	              <div class="pi-price">$29.00</div>
+	              <a href="javascript:;" class="btn btn-primary pull-right">Add to cart</a>
+	            </div>
+	        </div>
+	        <div class="col-md-4">
+	            <div class="product-item">
+	              <div class="pi-img-wrapper">
+	                <img src="http://placehold.it/600x550" class="img-responsive" alt="Berry Lace Dress">
+	                <div>
+	                  <a href="#" class="btn">View</a>
+	                </div>
+	              </div>
+	              <h3><a href="shop-item.html">Berry Lace Dress</a></h3>
+	              <div class="pi-price">$29.00</div>
+	              <a href="javascript:;" class="btn btn-primary pull-right">Add to cart</a>
+	            </div>
+	        </div>
+	    </div>
+	    <center><div class="pagination" tampilkan-data></div></center> 
+	</section>
+</main>
+
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p>+622152905148<br>
+						<a href="mailto:#">example.blabla@example.com</a><br>
+						<br>
+						Jl. Coblong Selatan Bandung
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Follow me</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+						<a href="#"><i class="fa fa-twitter fa-2"></i></a>
+						<a href="#"><i class="fa fa-dribbble fa-2"></i></a>
+						<a href="#"><i class="fa fa-github fa-2"></i></a>
+						<a href="#"><i class="fa fa-facebook fa-2"></i></a>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Text widget</h3>
+				<div class="widget-body">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum quia iste aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia asperiores adipisci maxime!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum quia iste aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia asperiores adipisci maxime!</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Form widget</h3>
+				<div class="widget-body">
+					<p>+622152905148<br>
+						<a href="mailto:#">example.blabla@example.com</a><br>
+						<br>
+						Jl. Coblong Selatan Bandung
+					</p>
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p>BDG JUARA </p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2017, Web Builder Template<br>
+						Design: <a href="#" rel="designer">Web Builder Template</a> </p>
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+<a id="back-to-top" href="#" class="btn btn-primary back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="fa fa-arrow-up"></span></a>
+
+<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/template.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <style>
+        [data-default-item] {
+            display: none;
+        }
+    </style>
+
+    <script>
+        $(function () {
+            loadproduct()
+            getCustomerById()
+
+            //tambah tombol search
+            $('[data-search]').click(function () {
+                loadproduct()
+            })
+
+
+            // input change
+            $('.radio input').change(function (e) {
+                loadproduct()
+            })
+        })
+
+        async function getCustomerById() {
+          let scid = await getClientServiceID()
+              customer_id = await getCustomer()
+
+          if(customer_id){
+            return $.post('https://build.web.id/api/customers/getCustomerdatabyId/', {
+              client_id: scid.cid,
+              service_id: scid.layanan_id,
+              customer_id: customer_id
+            }).then(res => {
+                $('[data-login]').html(res.data.firstname+' '+res.data.lastname+' <b class="caret"></b>')
+                $('[data-account]').hide()
+            })
+          }else{
+            $('[data-login]').hide()
+            $('[data-account]').show()
+          }
+        }
+
+        async function loadproduct() {
+            var
+                scid = await getClientServiceID()
+                cid = window.atob(scid.cid),
+                sid = window.atob(scid.layanan_id),
+                set_setting = await getConfigCurrency(scid.cid, scid.layanan_id),
+                
+            // delete html
+            $('[data-product-container]')
+                .children()
+                .not('[data-default-item]')
+                .remove()
+
+            let name = $('[data-text-search]').val()
+            let filter = $('[name="filter"]:checked').val()
+            let sort = $('[name="orderby"]:checked').val()
+            let page = $('[data-text-row-page]').val()
+            let limit = 12
+            let prod = await getProduct(cid, sid, name, filter, sort, '', '')
+            let products = await getProduct(cid, sid, name, filter, sort, page, limit)
+
+            jumlah_product = products.length
+            jumlah_page = Math.ceil(prod.length/limit, 1)
+            
+            //tampilkan paging product
+            $('[tampilkan-data]').html(makePaging(jumlah_page,page))
+
+            products.forEach(product => {
+                let
+                    clone = $('[data-default-item]').clone(),
+                    modified_clone = clone.removeAttr('data-default-item'),
+                    short_desc = product.description.substring(0, 50),
+                    link = `./product-detail.html?pid=${product.product_id}`
+                    if(set_setting.code=='IDR'){
+                        price = parseInt(product.price).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+                    }else{
+                        price = (product.price/set_setting.value).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+                    }
+                    
+                modified_clone.find('[data-image]').attr('src', product.image)
+                modified_clone.find('[data-title]').html(product.name)
+                modified_clone.find('[data-price]').text(set_setting.symbol_left+' '+price)
+                modified_clone.find('[data-short-desc]').html(short_desc)
+                modified_clone.find('[data-link]').attr('onclick','openLink("'+link+'")');
+                modified_clone.find('[data-add]').attr('onclick','saveCart('+product.product_id+')');
+
+                $('[data-product-container]').append(modified_clone)
+            })
+
+        }
+
+        function openLink(link){
+            window.location.href = link;
+        }
+
+        async function saveCart(product_id) {
+            let
+                scid = await getClientServiceID(),
+                cid = window.atob(scid.cid),
+                sid = window.atob(scid.layanan_id),
+                pid = parseInt(product_id),
+                customer_id = await getCustomer()
+
+            if(customer_id){
+                $.post('https://build.web.id/api/cart/add/', {
+                    client_id: cid,
+                    service_id: sid,
+                    customer_id: customer_id,
+                    product_id: pid,
+                }, function (res, status) {
+                    if(res.status==false){
+                        swal("Product not found!", "Silahkan pilih product!", "info")
+                        .then((value) => {
+                          window.location.href = "product.html";
+                        });
+                    }else{
+                       swal("Cart add!", "Successfully Add To Cart!", "success") 
+                    }
+                }).fail(res => {
+                    console.log(res.responseText)
+                })
+            }else{
+                swal("Anda belum login!", "Silahkan login terlebih dahulu!", "info")
+                .then((value) => {
+                    window.location.href = "login.html";
+                });
+            }
+        }
+
+        function getCustomer(){
+            return $.post('getdata.php').then(function(customer_id){
+                return customer_id
+            })
+        }
+
+        function getClientServiceID() {
+            return $.post('scid.txt')
+                .then(res => {
+                    return JSON.parse(res)
+                })
+        }
+
+        // Change : perubahan ada disini
+        function getProduct(cid, sid, name, filter, sort, page, limit) {
+            if(page==0){
+                start = 0;
+            }else{
+                start = page*limit;
+            }
+            
+            let data = {
+                client_id: cid,
+                service_id: sid,
+                filter_name: name,
+                sort: filter,
+                order: sort,
+                start: start,
+                limit: limit
+            }
+            
+            return $.post('https://build.web.id/api/product/data/', data).then(res => {
+                return res.data
+            })
+        }
+
+        function getConfigCurrency(cid, sid){
+            return $.post('https://build.web.id/api/setting/getLocalSetting/', {
+                client_id: cid,
+                service_id: sid
+            }).then(res => {
+                return res.data.config_currency
+            })
+        }
+
+        function makePaging(totalPages, pageIndex) {
+            var oPaging, i, j, k;
+            var totalPages = parseInt(totalPages);
+
+            pageIndex++;
+
+            i = pageIndex;
+            j = pageIndex - 1;
+            k = pageIndex + 1;
+
+            var oBefore, oAfter;
+            oBefore = "";
+            oAfter = "";
+
+            while (j != 0 && j != i - 6) {
+                oBefore = "<a class='Page' onClick='changePage("+(j-1)+")' data-index='"+(j-1)+"'>"+j+"</a>&nbsp;"+oBefore;
+                j--;
+            }
+
+            for (; k < totalPages + 1 && k < i + 6; k++) {
+                oAfter += "<a class='Page' onClick='changePage("+(k-1)+")' data-index='"+(k-1)+"'>"+k+"</a>&nbsp;";
+            }
+
+            oPaging = oBefore + "<a class='CurPage' href='#' rel='' style='color:Red;'>" + i.toString() + "</a>&nbsp;" + oAfter;
+            return oPaging;
+        }
+
+        function changePage(page){
+            $('[data-text-row-page]').val(page)
+            loadproduct()
+        }
+    </script>
+    
+</body>
+<style type="text/css">
+    .pagination {
+        display: inline-block;
+    }
+
+    .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        border: 1px solid #ddd;
+    }
+
+    .pagination a.active {
+        background-color: #4CAF50;
+        color: white;
+        border: 1px solid #4CAF50;
+    }
+
+    .pagination a:hover:not(.active) {background-color: #ddd;}
+
+    .pagination a:first-child {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    .pagination a:last-child {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+</style>
+</html>

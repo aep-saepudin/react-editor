@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Website Builder Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<header>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <img src="user-image/logo.png">
+                <!--button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Logo</a-->
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right qw-list-item">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="profile.html">Profile</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <a href="product.html">Product</a>
+                    </li>
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="bonus.html">Bonus</a>
+                    </li>
+                    <li class="qw-list-default">
+                        <a href="default.html">Default</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-account>Account <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="sign-up.html">Sign Up</a>
+                            </li>
+                            <li>
+                                <a href="login.html">Login</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-login>My Account <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="account.html">My Account</a>
+                            </li>
+                            <li>
+                                <a href="change-pass.html">Change Password</a>
+                            </li>
+                            <li>
+                                <a href="address-book.html">Address Book</a>
+                            </li>
+                            <li>
+                                <a href="view-cart.html">List Cart</a>
+                            </li>
+                            <li>
+                                <a href="whistlist.html">Whist List</a>
+                            </li>
+                            <li>
+                                <a href="order-history.html">Order History</a>
+                            </li>
+                            <li>
+                                <a href="rewards-points.html">Rewards Points</a>
+                            </li>
+                            <li>
+                                <a href="transactions.html">Transactions</a>
+                            </li>
+                            <li>
+                                <a href="logout.php">Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="view-cart.html">
+                            <i class="fa fa-shopping-cart"></i> (<span count-cart>0</span>)
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+</header>
+
+    <!-- Page Content -->
+    <section id="blog">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header" data-title>Order History
+                    <small data-title>Order History</small>
+                </h2>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li class="active" data-title>Order History</li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Blog Post Row -->
+        <div class="row" id="detail_order" style="padding: 20px;">
+            <table id="table" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Status</th>
+                        <th>Start date</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Status</th>
+                        <th>Start date</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <!-- /.row -->
+        <br>
+
+    </div>
+    <!-- /.container -->
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer-bs">
+        <div class="row">
+            <div class="col-md-3 footer-brand animated fadeInLeft">
+                <img src="user-image/logo.png">
+                <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut sem.</p>
+                <p>© 2017 World, All rights reserved</p>
+            </div>
+            <div class="col-md-3 footer-nav animated fadeInUp">
+                <h4>Menu —</h4>
+                <ul class="pages">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Profile</a></li>
+                     <li><a href="#">Contact</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-social animated fadeInDown">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">RSS</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-ns animated fadeInRight">
+                <h4>Contact</h4>
+                <p>
+                    3481 Melrose Place<br>Beverly Hills, CA 90210<br>
+                </p>
+                <p><i class="fa fa-phone"></i> 
+                    <abbr title="Phone">P</abbr>: (123) 456-7890</p>
+                <p><i class="fa fa-envelope-o"></i> 
+                    <abbr title="Email">E</abbr>: <a href="mailto:name@example.com">name@example.com</a>
+                </p>
+                <p><i class="fa fa-clock-o"></i> 
+                    <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Wow JS -->
+    <script src="js/wow.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/costume.js"></script>
+
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <style type="text/css">
+    	.display-product tr th{
+    		padding: 5px;
+    		text-align: center;
+    	}
+    	.display-product tr td{
+    		padding: 5px;
+    	}
+    	.display tr th{
+    		padding: 5px;
+    	}
+    	.display tr td{
+    		padding: 5px;
+    	}
+    </style>
+
+    <script>
+        $(function () {
+            loadPage()
+            getCart()
+        })
+
+        async function loadPage(){
+            await getOrdersHistory()
+        }
+
+        function getClientServiceID() {
+          return $.post('scid.txt')
+            .then(res => {
+              return JSON.parse(res)
+            })
+        }
+
+        function getCustomer() {
+          return $.post('getdata.php').then(function (customer_id) {
+            return customer_id
+          })
+        }
+
+        async function getCart() {
+            let
+                scid = await getClientServiceID(),
+                cid = window.atob(scid.cid),
+                sid = window.atob(scid.layanan_id),
+                co_id = await getCustomer()
+
+            return $.post('https://build.web.id/api/cart/content/', {
+                client_id: cid,
+                service_id: sid,
+                customer_id: co_id, // Todo Ganti nanti ya
+            })
+
+            .then(res => {
+                $('[count-cart]').text(res.count)
+            })
+
+            .fail(res => {
+                console.log(res.responseText)
+            })
+        }
+
+        async function getCustomerById() {
+          let scid = await getClientServiceID()
+              customer_id = await getCustomer()
+          return $.post('https://build.web.id/api/customers/getCustomerdatabyId/', {
+              client_id: scid.cid,
+              service_id: scid.layanan_id,
+              customer_id: customer_id
+            }).then(res => res.data)
+        }
+
+        async function getOrdersHistory() {
+          let scid = await getClientServiceID()
+              customer_id = await getCustomer()
+              customers = await getCustomerById()
+          if(customer_id){
+            firstname = customers.firstname;
+            lastname = customers.lastname;
+            $('[data-login]').html(firstname+' '+lastname+' <b class="caret"></b>')
+            $('[data-account]').hide()
+
+            return $.post('https://build.web.id/api/customers/getOrdersHistory/', {
+              client_id: scid.cid,
+              service_id: scid.layanan_id,
+              customer_id: customer_id
+            },function(data){
+                var row = data.data;
+                $('#table').DataTable( {
+                    "data" : row,
+                    columns : [
+                        { "data" : 'order_id' },
+                        { "data" : 'firstname' },
+                        { "data" : 'lastname' },
+                        { "data" : 'status' },
+                        { "data" : 'date_added' },
+                        {
+                            data: 'total',
+                            render: $.fn.dataTable.render.number( ',', '.', 0, 'Rp ' )
+                        },
+                        {
+                            "data": 'order_id',
+                            "render": function(data, type, row, meta){
+                                data = '<button onClick="getDetail('+data+')"><i class="glyphicon glyphicon-search"></i> Detail </button><button onClick="getInvoice('+data+')"><i class="glyphicon glyphicon-list-alt"></i> Invoice</button>';
+                                return data;
+                            }
+                        }
+                    ]
+                });
+            });
+          }else{
+            $('[data-login]').hide()
+            $('[data-account]').show()
+
+            swal("Anda belum login!", "Silahkan login terlebih dahulu!", "info")
+            .then((value) => {
+                window.location.href = "login.html";
+            });
+          }
+          
+        }
+
+        async function getOrderById(order_id) {
+          let scid = await getClientServiceID()
+              customer_id = await getCustomer()
+          return $.post("https://build.web.id/api/customers/getOrderDetail/",{
+                "client_id": scid.cid,
+                "service_id": scid.layanan_id,
+                "customer_id": customer_id,
+                "order_id": order_id
+            }).then(res => res.data)
+        }
+
+        async function getOrderProductbyOrderId(order_id) {
+          let scid = await getClientServiceID()
+              customer_id = await getCustomer()
+          return $.post("https://build.web.id/api/customers/getOrderProductbyOrderId/",{
+                "client_id": scid.cid,
+                "service_id": scid.layanan_id,
+                "order_id": order_id
+            }).then(res => res.data)
+        }
+
+        async function getCityName(province,city) {
+          let scid = await getClientServiceID()
+          return $.post("https://build.web.id/api/customers/getCityName/",{
+                "client_id": scid.cid,
+                "service_id": scid.layanan_id,
+                "province": province,
+                "city": city
+            }).then(res => res.data)
+        }
+
+        async function getDetail(order_id){
+            let orders = await getOrderById(order_id)
+                product = await getOrderProductbyOrderId(order_id)
+                len = product.length;
+                sub_total = parseInt(orders.total).toFixed(0);
+                shipping_method = orders.shipping_method;
+                payment = await getCityName(orders.payment_zone_id,orders.payment_city)
+                shipping = await getCityName(orders.shipping_zone_id,orders.shipping_city)
+                customer_id = await getCustomer()
+            if(customer_id){
+                var htmlData = '';
+
+                htmlData += '<table class="display blueTable" width="100%"><thead>';
+                htmlData += '<tr><th colspan=2>Order Details</th></tr></thead>';
+                htmlData += '<tbody><tr><td>Order ID : #'+orders.order_id+'</td><td>Payment Method : '+orders.payment_method+'</td></tr>';
+                htmlData += '<tr><td>Date Added : '+orders.date_added+'</td><td>Shipping Method : '+orders.shipping_method+'</td></tr></body>';
+                htmlData += '</table>';
+                htmlData += '<br><br>';
+                htmlData += '<table class="display blueTable" border=1 width="100%"><thead>';
+                htmlData += '<tr><th>Payment Address</th><th>Shipping Address</th></tr></thead>';
+                htmlData += '<tbody><tr><td>Name : '+orders.payment_firstname+' '+orders.payment_lastname+'</td><td>Name : '+orders.shipping_firstname+' '+orders.shipping_lastname+'</td></tr>';
+                htmlData += '<tr><td>Address : '+orders.payment_address_1+'</td><td>Address : '+orders.shipping_address_1+'</td></tr>';
+                htmlData += '<tr><td>City : '+payment.type+' '+payment.city_name+' '+orders.payment_postcode+'</td><td>City : '+shipping.type+' '+shipping.city_name+' '+orders.shipping_postcode+'</td></tr>';
+                htmlData += '<tr><td>Prov : '+payment.province+'</td><td>Prov : '+shipping.province+'</td></tr></body>';
+                htmlData += '<tr><td>Country : '+orders.payment_country+'</td><td>Country : '+orders.shipping_country+'</td></tr>';
+                htmlData += '</body></table>';
+                htmlData += '<br><br>';
+
+                htmlData += '<table class="display-product blueTable" border=1 width="100%"><thead>';
+                htmlData += '<tr><th>No</th><th>Product Name</th><th>Model</th><th>Quantity</th><th>Price</th><th>Total</th></tr></thead><tbody>';
+                var jumlah_total = [];
+                for (var i = 0; i < len; i++) {
+                    var price = parseInt(product[i].price).toFixed(2);
+                    var total = parseInt(product[i].total).toFixed(2);
+                    jumlah_total.push(parseInt(total));
+                    
+                    price = price.replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+                    total = total.replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+
+                    htmlData += '<tr><td style="text-align:center">'+(i+1)+'</td><td>'+product[i].name+'</td><td>'+product[i].model+'</td><td style="text-align:right">'+product[i].quantity+'</td><td style="text-align:right">Rp '+price+'</td><td style="text-align:right">Rp '+total+'</td></tr>';
+                }
+                var sum_total = jumlah_total.reduce((a, b) => a + b, 0);
+                sum_total = sum_total.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+
+                htmlData += '<tr><td colspan=5 style="text-align:right"><b>Sub Total</b></td><td style="text-align:right">Rp '+sum_total+'</td></tr>';
+                htmlData += '<tr><td colspan=5 style="text-align:right"><b>'+shipping_method+'</b></td><td style="text-align:right">Rp 0.00</td></tr>';
+                htmlData += '<tr><td colspan=5 style="text-align:right"><b>Total</b></td><td style="text-align:right">Rp '+sum_total+'</td></tr>';
+                htmlData += '<tbody></table>';
+
+                htmlData += '<br><br>';
+                htmlData += '<table class="display blueTable" border=1 width="100%"><thead>';
+                htmlData += '<tr><th colspan=2>Order Comments</th></tr></thead>';
+                htmlData += '<tbody><tr><td>'+orders.comment+'</td></tr></body>';
+                htmlData += '</table>';
+                /*htmlData += '<br><br>';
+                htmlData += '<table class="display blueTable" border=1 width="100%"><thead>';
+                htmlData += '<tr><th>Date Added</th><th>Status</th></tr></thead>';
+                htmlData += '<tbody><tr><td>Order Status</td><td>Order Date</td></tr></body>';
+                htmlData += '</table>';*/
+
+                htmlData += '<br>';
+                htmlData += '<div style="float:right"><a href="order-history.html"><button class="btn btn-primary right">Back</button></a></div>';
+                htmlData += '<br>';
+                
+                $("#detail_order").html(htmlData);
+            }else{
+                swal("Anda belum login!", "Silahkan login terlebih dahulu!", "info")
+                .then((value) => {
+                    window.location.href = "login.html";
+                });
+            }
+        }
+
+        async function getInvoice(order_id){
+            $('[data-title]').text('Invoice')
+            let orders = await getOrderById(order_id)
+                product = await getOrderProductbyOrderId(order_id)
+                len = product.length;
+                sub_total = parseInt(orders.total).toFixed(0);
+                shipping_method = orders.shipping_method;
+                payment = await getCityName(orders.payment_zone_id,orders.payment_city)
+                shipping = await getCityName(orders.shipping_zone_id,orders.shipping_city)
+                customer_id = await getCustomer()
+            if(customer_id){
+                var htmlData = '';
+
+                htmlData += '<table class="display blueTable" border=1 width="100%"><thead>';
+                htmlData += '<tr><th colspan=2>Order Details</th></tr></thead>';
+                htmlData += '<tbody><tr><td>No Invoice : '+orders.invoice_prefix+orders.invoice_no+'</td><td>Currency : '+orders.currency_code+'</td></tr></body>';
+                htmlData += '<tr><td>Order ID : #'+orders.order_id+'</td><td>Payment Method : '+orders.payment_method+'</td></tr>';
+                htmlData += '<tr><td>Date Added : '+orders.date_added+'</td><td>Shipping Method : '+orders.shipping_method+'</td></tr></body>';
+                htmlData += '</table>';
+                htmlData += '<br><br>';
+
+                htmlData += '<table class="display-product blueTable" border=1 width="100%"><thead>';
+                htmlData += '<tr><th>No</th><th>Product Name</th><th>Model</th><th>Quantity</th><th>Price</th><th>Total</th></tr></thead><tbody>';
+                var jumlah_total = [];
+                for (var i = 0; i < len; i++) {
+                    var price = parseInt(product[i].price).toFixed(2);
+                    var total = parseInt(product[i].total).toFixed(2);
+                    jumlah_total.push(parseInt(total));
+                    
+                    price = price.replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+                    total = total.replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+
+                    htmlData += '<tr><td style="text-align:center">'+(i+1)+'</td><td>'+product[i].name+'</td><td>'+product[i].model+'</td><td style="text-align:right">'+product[i].quantity+'</td><td style="text-align:right">Rp '+price+'</td><td style="text-align:right">Rp '+total+'</td></tr>';
+                }
+                var sum_total = jumlah_total.reduce((a, b) => a + b, 0);
+                sum_total = sum_total.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+
+                htmlData += '<tr><td colspan=5 style="text-align:right"><b>Sub Total</b></td><td style="text-align:right">Rp '+sum_total+'</td></tr>';
+                htmlData += '<tr><td colspan=5 style="text-align:right"><b>'+shipping_method+'</b></td><td style="text-align:right">Rp 0.00</td></tr>';
+                htmlData += '<tr><td colspan=5 style="text-align:right"><b>Total</b></td><td style="text-align:right">Rp '+sum_total+'</td></tr>';
+                htmlData += '<tbody></table>';
+
+                htmlData += '<br><br>';
+                htmlData += '<table class="display blueTable" border=1 width="100%"><thead>';
+                htmlData += '<tr><th colspan=2>Shipping Address</th></tr></thead>';
+                htmlData += '<tbody><tr><td>Name : '+orders.payment_firstname+' '+orders.payment_lastname+'</td><td>Telepon : '+orders.telephone+'</td></tr>';
+                htmlData += '<tr><td>Address : '+orders.shipping_address_1+'</td><td>City : '+shipping.city_name+'</td></tr></body>';
+                htmlData += '<tr><td>Prov : '+shipping.province+'</td><td>Country : '+orders.shipping_country+'</td></tr></body>';
+                htmlData += '</table>';
+                
+                htmlData += '<br>';
+                htmlData += '<div style="float:right"><a href="order-history.html"><button class="btn btn-primary right">Back</button></a></div>';
+                htmlData += '<br>';
+                
+                $("#detail_order").html(htmlData);
+            }else{
+                swal("Anda belum login!", "Silahkan login terlebih dahulu!", "info")
+                .then((value) => {
+                    window.location.href = "login.html";
+                });
+            }
+        }
+    </script>
+
+</body>
+
+</html>

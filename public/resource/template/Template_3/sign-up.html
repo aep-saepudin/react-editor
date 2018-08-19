@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- METAS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- TITLE -->
+    <title>Builder Template</title>
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="images/favicon.png"/>
+
+    <!-- LOAD MAIN CSS -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+    <!-- LOAD COLOR STYLE (OPTONAL) CSS -->
+    <link href="css/lunar.css" rel="stylesheet" type="text/css" id="colorstyle">
+
+    <!-- LOAD CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <!-- Preloader Start -->
+    <div id="preloader">
+        <i class="fa fa-spinner fa-spin preloader-animation" aria-hidden="true"></i>
+    </div>
+    <!-- Preloader End -->
+    
+    
+        <!-- HEADER START -->
+        <!--section id="header"-->
+        <!-- Fixed navbar -->
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="images/logo.png" alt="Edura - Multipurpose Website Template">
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav qw-list-item">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="bonus.html">Bonus</a></li>
+                        <li class="qw-list-default"><a href="default.html">Default</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-account>Account <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="sign-up.html">Sign Up</a></li>
+                                <li><a href="login.html">Login</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-login>My Account</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="account.html">My Account</a></li>
+                                <li><a href="change-pass.html">Change Password</a></li>
+                                <li><a href="address-book.html">Address Book</a></li>
+                                <li><a href="view-cart.html">List Cart</a></li>
+                                <li><a href="whistlist.html">Whist List</a></li>
+                                <li><a href="order-history.html">Order History</a></li>
+                                <li><a href="rewards-points.html">Rewads Points</a></li>
+                                <li><a href="transaction.html">Transaction</a></li>
+                                <li><a href="logout.php">Logout</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="view-cart.html"><i class="fa fa-shopping-cart"></i> (<span count-cart>0</span>)</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+    </header>
+        <!--/section-->
+        <!-- HEADER END -->
+
+    <!-- WRAPPER START -->
+    <div id="wrapper">
+        <!-- PAGE TITLE START -->
+        <section id="title" class="container-fluid wow fadeInDown">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <h1>Sign Up</h1>
+                    </div>
+                    <div class="col-xs-6 text-right breadcrumbs">
+                        <ul class="list-inline list-unstyled">
+                            <li><a href="index.html">Home</a></li>
+                            <li>/</li>
+                            <li>Sign Up</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- PAGE TITLE END -->
+
+
+        <!-- CONTENT START -->
+        <section id="sign-up" style="padding-top: 30px">
+            <div class="container" id="form-sign-up">
+                <div class="row">
+                        <div class="col-md-6">
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>First Name</label>
+                                    <input type="text" class="form-control" id="first_name" name="first_name" required data-validation-required-message="Please enter your first name.">
+                                    <p class="help-block"></p>
+                                </div>
+                            </div>
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Last Name</label>
+                                    <input type="text" class="form-control" id="last_name" name="last_name" required data-validation-required-message="Please enter your last name.">
+                                </div>
+                            </div>
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Email Address</label>
+                                    <input type="email" class="form-control" id="email" name="email" required data-validation-required-message="Please enter your email address.">
+                                </div>
+                            </div>
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Telepon</label>
+                                    <input type="tel" class="form-control" id="telepon" name="telepon" required data-validation-required-message="Please enter your phone number.">
+                                </div>
+                            </div>
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control" id="password" name="password" required data-validation-required-message="Please enter your password.">
+                                </div>
+                            </div>
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Konfirm Password</label>
+                                    <input type="password" class="form-control" id="kpassword" name="kpassword" required data-validation-required-message="Please enter your konfirm password.">
+                                </div>
+                            </div>
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>First Name Address</label>
+                                    <input type="text" class="form-control" id="firstname_ad" name="firstname_ad" required data-validation-required-message="Please enter your first name address.">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Last Name Address</label>
+                                    <input type="text" class="form-control" id="lastname_ad" name="lastname_ad" required data-validation-required-message="Please enter your last name address.">
+                                </div>
+                            </div>
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Company Address</label>
+                                    <input type="text" class="form-control" id="company_ad" name="company_ad" required data-validation-required-message="Please enter your company address.">
+                                </div>
+                            </div>
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Address</label>
+                                    <input type="text" class="form-control" id="address_ad" name="address_ad" required data-validation-required-message="Please enter your address.">
+                                </div>
+                            </div>
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Country</label>
+                                    <select name="country" class="form-control" required data-validation-required-message="Please enter your country" id="country" disabled="true">
+                                        <option value="">- Choose Country -</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Region</label>
+                                    <select name="region" class="form-control" required data-validation-required-message="Please enter your region" id="region">
+                                        <option value="">- Choose Region -</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>City</label>
+                                    <select name="city" class="form-control" required data-validation-required-message="Please enter your city" id="city">
+                                        <option value="">- Choose City -</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Postal Code</label>
+                                    <input type="text" class="form-control" id="post_code" name="post_code" required data-validation-required-message="Please enter your postal code.">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="success"></div>
+                        <!-- For success/fail messages -->
+                        <center><button class="btn btn-primary" id="btn-signup">Sign Up</button></center>
+                </div>
+            </div>
+
+            <div class="container" id="info-sign-up" style="display: none;">
+                <div class="row">
+                    <div class="col-md-6">
+                        Sign Up Berhasil
+                    </div>
+                </div>
+            </div>
+            <div class="space40"></div>
+        </section>
+        <!-- CONTENT END -->
+
+        <!-- FOOTER START -->
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="images/logo.png" alt="Logo - Web Builder Template"><br><br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. <b>Lorem ipsum dolor sit amet, consectetur adipiscing</b>.</p>
+                        <br>
+                        <ul class="list-unstyled list-inline social-icons">
+                            <li><a href="#" class="facebook"><i class="fa fa-facebook facebook"></i></a></li>
+                            <li><a href="#" class="twitter"><i class="fa fa-twitter twitter"></i></a></li>
+                            <li><a href="#" class="googleplus"><i class="fa fa-google-plus googleplus"></i></a></li>
+                            <li><a href="#" class="youtube"><i class="fa fa-youtube youtube"></i></a></li>
+                            <li><a href="#" class="linkedin"><i class="fa fa-linkedin linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>CONTACT US</h4>
+                        <p><i class="fa fa-map-pin fa-fw"></i> Graha Pos Indonesia Lantai 6 C, Jl.Banda no.30, Bandung 40115 -  Indonesia</p>
+                        <p><i class="fa fa-phone fa-fw"></i> 0804-1-808-888</p>
+                        <p><i class="fa fa-phone fa-fw"></i> +62 21 52905148</p>
+                        <p><i class="fa fa-envelope fa-fw"></i> info@qwords.com</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>PAGES</h4>
+                        <ul class="list-unstyled col-md-6">
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">HOME</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">PROFILE</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">CONTACT</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">PRODUCT</a></li>
+                        </ul>
+                        <ul class="list-unstyled col-md-6">
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">GALLERY</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">BONUS</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">OTHER</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>NEWSLETTER</h4>
+                        <p>Subscribe to our monthly newsletter and stay updated with the latest news and info.</p>
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-envelope-o"></i></div>
+                                    <input type="email_news" class="form-control" id="email_news" placeholder="Your Email Address" required>
+                                </div>
+                            </div>
+                            <div class="form-group pull-right">
+                                <button type="submit" class="btn btn-primary">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <hr>
+                    <div class="col-md-12 text-center bottom">
+                        <p>Copyright &copy; 2017 Web Builder. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- FOOTER END -->
+
+
+    </div>
+    <!-- WRAPPER END -->
+
+    <!-- back to top button -->
+    <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbo8AqPhlblo2nbndho2I8zLzr0o9Qs28"></script>
+    <script type="text/javascript" src="js/gmap.js"></script>
+
+    <!-- MAIN JS FILES REQUIRED ON ALL PAGES -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="vendor/SmoothScroll/SmoothScroll.min.js"></script>
+
+    <script src="vendor/waypoints/waypoints.min.js"></script>
+    <script src="vendor/counterup/jquery.counterup.min.js"></script>
+
+
+    <!-- HERO SLIDER-->
+    <script src="vendor/hero-slider/js/modernizr.js"></script>
+    <script src="vendor/hero-slider/js/main.js"></script>
+
+    <!-- OWL CAROUSEL -->
+    <script src="vendor/owl-carousel/owl.carousel.js"></script>
+
+    <!-- FILTERIZR -->
+    <script src="vendor/jquery/jquery.filterizr.js"></script>
+
+    <!-- EDURA JS REQUIRED ON ALL PAGES-->
+    <script src="js/edura.js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            jQuery.get('scid.txt', function(value) {
+                var obj = JSON.parse(value);
+
+                $.post('getdata.php',function(customer_id){
+                    if(customer_id){
+                        $.post("https://build.web.id/api/customers/getCustomerdatabyId/",{
+                            "client_id": obj.cid,
+                            "service_id": obj.layanan_id,
+                            "customer_id": customer_id
+                        },function(data){
+                            firstname = data.data.firstname;
+                            lastname = data.data.lastname;
+                            $('[data-login]').html(firstname+' '+lastname+' <b class="caret"></b>')
+                            $('[data-account]').hide()
+                        }); 
+
+                        cid = window.atob(obj.cid),
+                        sid = window.atob(obj.layanan_id),
+                        $.post("https://build.web.id/api/cart/content/",{
+                            "client_id": cid,
+                            "service_id": sid,
+                            "customer_id": customer_id
+                        },function(data){
+                            $('[count-cart]').text(data.count)
+                        });
+                    }else{
+                        $('[data-login]').hide()
+                        $('[data-account]').show()
+                    }
+                });
+
+                //get select country
+                $.post("https://build.web.id/api/customers/getCountry/",{
+                    client_id: obj.cid,
+                    service_id: obj.layanan_id
+                },
+                function(data,status){
+                    var len = data.data.length;
+                    for (var i = 0; i < len; i++) {
+                        if(data.data[i]['country_id']==100){
+                            var select = 'selected';
+                        }else{
+                            var select = '';
+                        }
+                        $('#country').append("<option value="+data.data[i]['country_id']+" "+select+">"+data.data[i]['name']+"</option>");
+                    }
+                });
+
+                /*$('#country').change(function(){
+                    var country_id = $('#country').val();
+                    //get select region
+                    $.post("https://build.web.id/api/customers/getZone/",{
+                        client_id: obj.cid,
+                        service_id: obj.layanan_id,
+                        country_id: country_id
+                    },
+                    function(data,status){
+                        var len = data.data.length;
+                        $('#region').empty();
+                        for (var i = 0; i < len; i++) {
+                            $('#region').append("<option value="+data.data[i]['zone_id']+">"+data.data[i]['name']+"</option>");
+                        }
+                    });
+                });*/
+
+                //get select prov
+                $.post("https://build.web.id/api/Qwords_Shipping/getProvince/",{
+                    client_id: obj.cid,
+                    service_id: obj.layanan_id
+                },
+                function(data){
+                    var len = data.data.length;
+                    for (var i = 0; i < len; i++) {
+                        $('#region').append("<option value="+data.data[i]['province_id']+">"+data.data[i]['province']+"</option>");
+                    }
+                });
+
+                $('#region').change(function(){
+                    var province_id = $('#region').val();
+                    //get select region
+                    $.post("https://build.web.id/api/Qwords_Shipping/getCityOfProvince/",{
+                        client_id: obj.cid,
+                        service_id: obj.layanan_id,
+                        province: province_id
+                    },
+                    function(data,status){
+                        var len = data.data.length;
+                        $('#city').empty();
+                        for (var i = 0; i < len; i++) {
+                            $('#city').append("<option value="+data.data[i]['city_id']+">"+data.data[i]['type']+" "+data.data[i]['city_name']+"</option>");
+                        }
+                    });
+                });
+
+                $('#btn-signup').click(function(){
+                    var first_name = $('#first_name').val();
+                    var last_name = $('#last_name').val();
+                    var email = $('#email').val();
+                    var telephone = $('#telepon').val();
+                    var password = $('#password').val();
+                    var firstname_ad = $('#firstname_ad').val();
+                    var lastname_ad = $('#lastname_ad').val();
+                    var company_ad = $('#company_ad').val();
+                    var address_ad = $('#address_ad').val();
+                    var city = $('#city').val();
+                    var postalcode_ad = $('#post_code').val();
+                    var country_ad = $('#country').val();
+                    var region_ad = $('#region').val();
+
+                    jQuery.get('scid.txt', function(value) {
+                        var obj = JSON.parse(value);
+                        $.post("https://build.web.id/api/customers/register/",{
+                            "client_id": obj.cid,
+                            "service_id": obj.layanan_id,
+                            "firstname": first_name,
+                            "lastname": last_name,
+                            "email": email,
+                            "telephone": telephone,
+                            "password": password,
+                            "firstname_ad": firstname_ad,
+                            "lastname_ad": lastname_ad,
+                            "company_ad": company_ad,
+                            "address_ad": address_ad,
+                            "city_ad": city,
+                            "postalcode_ad": postalcode_ad,
+                            "country_ad": country_ad,
+                            "region_ad": region_ad
+                        },
+                        function(data){
+                            var status = data.status;
+                            var msg = data.msg;
+
+                            if(status==false){
+                                swal(msg);
+                                swal("Error", msg, "error");
+                            }else{
+                                swal("Good job!", "Registration success!", "success")
+                                .then((value) => {
+                                    window.location.href = "index.html";
+                                });
+                            }
+                        });
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

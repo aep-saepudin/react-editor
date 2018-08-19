@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Web Builder Template</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/themes/fontawesome-stars.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<header>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <img src="user-image/logo.png">
+                <!--button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Logo</a-->
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right qw-list-item">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="profile.html">Profile</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <a href="product.html">Product</a>
+                    </li>
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="bonus.html">Bonus</a>
+                    </li>
+                    <li class="qw-list-default">
+                        <a href="default.html">Default</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-account>Account <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="sign-up.html">Sign Up</a>
+                            </li>
+                            <li>
+                                <a href="login.html">Login</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-login>My Account <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="account.html">My Account</a>
+                            </li>
+                            <li>
+                                <a href="change-pass.html">Change Password</a>
+                            </li>
+                            <li>
+                                <a href="address-book.html">Address Book</a>
+                            </li>
+                            <li>
+                                <a href="view-cart.html">List Cart</a>
+                            </li>
+                            <li>
+                                <a href="whistlist.html">Whist List</a>
+                            </li>
+                            <li>
+                                <a href="order-history.html">Order History</a>
+                            </li>
+                            <li>
+                                <a href="rewards-points.html">Rewards Points</a>
+                            </li>
+                            <li>
+                                <a href="transactions.html">Transactions</a>
+                            </li>
+                            <li>
+                                <a href="logout.php">Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="view-cart.html">
+                            <i class="fa fa-shopping-cart"></i> (<span count-cart>0</span>)
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+</header>
+
+
+    <section id="product-detail">
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Product Detail
+                    <small>Subheading</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li class="active">Product Detail</li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+        
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <!-- product -->
+            <div class="product-content product-wrap clearfix product-deatil">
+                <div class="row">
+                        <div class="col-md-5 col-sm-12 col-xs-12 ">
+                            <div class="product-image"> 
+                                <div id="myCarousel-2" class="carousel slide">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel-2" data-slide-to="0" class=""></li>
+                                    <li data-target="#myCarousel-2" data-slide-to="1" class="active"></li>
+                                    <li data-target="#myCarousel-2" data-slide-to="2" class=""></li>
+                                    <li data-target="#myCarousel-2" data-slide-to="3" class=""></li>
+                                    <li data-target="#myCarousel-2" data-slide-to="4" class=""></li>
+                                </ol>
+                                <div class="carousel-inner" data-image-container>
+                                    <!-- Slide 1 -->
+                                    <div class="item active">
+                                        <img data-qw-image="" src="https://lorempixel.com/300/300/technics/1/" alt="">
+                                    </div>
+                                    <div class="item" data-image-item>
+                                        <img data-qw-image="" src="https://lorempixel.com/300/300/technics/1/" alt="">
+                                    </div>
+                                </div>
+                                <a class="left carousel-control" href="#myCarousel-2" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
+                                <a class="right carousel-control" href="#myCarousel-2" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-12 col-xs-12" style="padding-left: 20px;">
+                    
+                        <h2 class="name" data-qw-title="">
+                            Product Name Title Here 
+                            <small>Product by <a href="javascript:void(0);">Adeline</a></small>
+                            <i class="fa fa-star fa-2x text-primary"></i>
+                            <i class="fa fa-star fa-2x text-primary"></i>
+                            <i class="fa fa-star fa-2x text-primary"></i>
+                            <i class="fa fa-star fa-2x text-primary"></i>
+                            <i class="fa fa-star fa-2x text-muted"></i>
+                            <span class="fa fa-2x"><h5>(109) Votes</h5></span>  
+                            <a href="javascript:void(0);">109 customer reviews</a>
+                        </h2>
+                        <hr>
+                        <h3 class="price-container" data-qw-price="">
+                            $129.54
+                            <small>*includes tax</small>
+                        </h3>
+                        <div class="certified">
+                            <ul>
+                                <li><a href="javascript:void(0);">Delivery time<span>7 Working Days</span></a></li>
+                                <li><a href="javascript:void(0);">Certified<span>Quality Assured</span></a></li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-white btn-primary add-whistlist" data-wish="">
+                            <i class="fa fa-heart-o"></i>
+                            <span>Save To Favorite</span>
+                        </button>
+                        <hr>
+                        <div class="description description-tabs">
+                            <ul id="myTab" class="nav nav-pills">
+                                <li class="active"><a href="#more-information" data-toggle="tab" class="no-margin">Product Description </a></li>
+                                <li class=""><a href="#specifications" data-toggle="tab">Specifications</a></li>
+                                <li class=""><a href="#reviews" data-toggle="tab">Reviews (<span data-count-review>0</span>)</a></li>
+                            </ul>
+                            <div id="myTabContent" class="tab-content">
+                                <div class="tab-pane fade active in" id="more-information" data-qw-description="">
+                                    <br>
+                                    <strong>Description Title</strong>
+                                    <p>Integer egestas, orci id condimentum eleifend, nibh nisi pulvinar eros, vitae ornare massa neque ut orci. Nam aliquet lectus sed odio eleifend, at iaculis dolor egestas. Nunc elementum pellentesque augue sodales porta. Etiam aliquet rutrum turpis, feugiat sodales ipsum consectetur nec. </p>
+                                </div>
+                                <div class="tab-pane fade" id="specifications" data-qw-spesification="">
+                                    <br>
+                                    <dl class="">
+                                            <dt>Gravina</dt>
+                                            <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+                                            <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+                                            <dd>Eget lacinia odio sem nec elit.</dd>
+                                            <br>
+
+                                            <dt>Test lists</dt>
+                                            <dd>A description list is perfect for defining terms.</dd>
+                                            <br>    
+
+                                            <dt>Altra porta</dt>
+                                            <dd>Vestibulum id ligula porta felis euismod semper</dd>
+                                        </dl>
+                                </div>
+                                <div class="tab-pane fade" id="reviews">
+                                    <br>
+                                    <form method="post" class="well padding-bottom-10" onsubmit="return false;" style="min-height: 120px">
+                                        <textarea rows="2" class="form-control" placeholder="Write a review" data-teks-review></textarea>
+                                        <div class="margin-top-10">
+                                            <button type="submit" class="btn btn-sm btn-primary pull-right" data-add-button>
+                                                Submit Review
+                                            </button>
+                                            <!--a href="javascript:void(0);" class="btn btn-link profile-link-btn" rel="tooltip" data-placement="bottom" title="" data-original-title="Add Location"><i class="fa fa-location-arrow"></i></a>
+                                            <a href="javascript:void(0);" class="btn btn-link profile-link-btn" rel="tooltip" data-placement="bottom" title="" data-original-title="Add Voice"><i class="fa fa-microphone"></i></a>
+                                            <a href="javascript:void(0);" class="btn btn-link profile-link-btn" rel="tooltip" data-placement="bottom" title="" data-original-title="Add Photo"><i class="fa fa-camera"></i></a>
+                                            <a href="javascript:void(0);" class="btn btn-link profile-link-btn" rel="tooltip" data-placement="bottom" title="" data-original-title="Add File"><i class="fa fa-file"></i></a-->
+                                        </div>
+                                    </form>
+
+                                    <style>
+                                            #qw-add-review .br-wrapper {
+                                                margin-left: 4em;
+                                                margin-top: -1.4em;
+                                            }
+                                            #qw-view-review [data-default-review] {
+                                                display: none;
+                                            }
+                                            #qw-view-review .btn-group:last-child {
+                                                float: right;
+                                            }
+                                            #qw-view-review .btn-group [data-delete-review]:hover {
+                                                background: red;
+                                            }
+                                            #qw-view-review .btn-group [data-edit-review]:hover {
+                                                background: #337ab7;
+                                            }
+                                            #qw-view-review [data-save-group] {
+                                                display: none;
+                                            }
+                                            #qw-view-review [contenteditable="true"] {
+                                                border: 1px solid #00BCD4
+                                            }
+                                            [data-default-review]{
+                                                display: none;
+                                            }
+                                            [data-save-group] {
+                                                display: none;
+                                            }
+
+                                    </style>
+                                    <div class="chat-body no-padding profile-message" data-container>
+                                        <!--ul-->
+                                            <li class="well message" data-default-review data-item style="list-style: none;">
+                                                <!--img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="online"-->
+                                                <span class="message-text"> 
+                                                    <a href="javascript:void(0);" class="username" data-name>
+                                                        Alisha Molly 
+                                                        <span class="badge" data-date>Purchase Verified</span> 
+                                                        <select class="qw-review">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                        </select>
+                                                    </a> 
+                                                    <template data-review-id></template>
+                                                    <p data-text>Can't divide were divide fish forth fish to. Was can't form the, living life grass darkness very image let unto fowl isn't in blessed fill life yielding above all moved </p>
+                                                </span>
+                                                <ul class="list-inline font-xs">
+                                                    <!--li>
+                                                        <a href="javascript:void(0);" class="text-info"><i class="fa fa-thumbs-up"></i> This was helpful (22)</a>
+                                                    </li-->
+                                                    <li class="pull-right">
+                                                        <small class="text-muted pull-right ultra-light" data-date> Posted 1 year ago </small>
+                                                    </li>
+                                                </ul>
+                                                <div class="btn-group" role="group" data-save-group>
+                                                    <button class="btn btn-primary" data-save-review="">
+                                                        save
+                                                    </button>
+                                                    <button class="btn btn-success" data-cancel-review="">
+                                                        cancel
+                                                    </button>
+                                                </div>
+
+                                                <div class="btn-group" role="group">
+                                                    <button class="btn" data-edit-review>
+                                                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                                    </button>
+                                                    <button class="btn" data-delete-review>
+                                                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                                    </button>
+                                                </div>
+                                            </li>
+                                        <!--/ul-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <button class="btn btn-white btn-primary"><i class="fa fa-envelope"></i> Contact Seller</button>
+                            </div>
+                            <div class="col-md-4 col-lg-6">
+                                        <!-- Add Stock
+                                        <input data-stock type="number" name="quantity" min="1" max="100" style="
+                                          margin-right:1em;
+                                      "> -->
+                                        <button data-add="" class="btn btn-white btn-primary" style="
+                                          background: green;
+                                      ">
+                                            <i class="fa fa-shopping-cart ui-droppable" style="
+                                          margin-right: 1em;
+                                      "></i>Add To Cart</button>
+                                        <a href="view-cart.html">
+                                            <button class="btn btn-white btn-primary" style="
+                                          background: green;
+                                          margin-left: 1em;
+                                      ">View Cart</button>
+                                        </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end product -->
+        </div>
+
+        </div>
+        <!-- /.row -->
+        <br>
+    </div>
+    <!-- /.container -->
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-bs">
+        <div class="row">
+            <div class="col-md-3 footer-brand animated fadeInLeft">
+                <img src="user-image/logo.png">
+                <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut sem.</p>
+                <p>© 2017 World, All rights reserved</p>
+            </div>
+            <div class="col-md-3 footer-nav animated fadeInUp">
+                <h4>Menu —</h4>
+                <ul class="pages">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Profile</a></li>
+                     <li><a href="#">Contact</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-social animated fadeInDown">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">RSS</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-ns animated fadeInRight">
+                <h4>Contact</h4>
+                <p>
+                    3481 Melrose Place<br>Beverly Hills, CA 90210<br>
+                </p>
+                <p><i class="fa fa-phone"></i> 
+                    <abbr title="Phone">P</abbr>: (123) 456-7890</p>
+                <p><i class="fa fa-envelope-o"></i> 
+                    <abbr title="Email">E</abbr>: <a href="mailto:name@example.com">name@example.com</a>
+                </p>
+                <p><i class="fa fa-clock-o"></i> 
+                    <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Wow JS -->
+    <script src="js/wow.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/costume.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/jquery.barrating.min.js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            LoadReviews()
+            loadToHTML()
+            getCustomerById()
+            console.log('[qw-inject.js] Loaded')
+        })
+        /** 
+         * 
+         * @returns {number} PID
+         */
+        function getPIDFromUrl() {
+            var urlParams = new URLSearchParams(window.location.search)
+            return urlParams.get("pid")
+        }
+        /**
+         * Algoritma
+         * -------------------------
+         * - Get ClientID and Service ID from HTML>
+         * - Use it to Create Request to Get Product
+         */
+        function getClientServiceID() {
+            return $.post('scid.txt')
+                .then(res => {
+                    return JSON.parse(res)
+                })
+        }
+        function getProduct(cid, sid, pid) {
+            return $.post('https://build.web.id/api/product/select', {
+                client_id: cid,
+                service_id: sid,
+                pid: pid
+            })
+        }
+        function getProductAttribut(cid, sid, pid) {
+            return $.post('https://build.web.id/api/product/attribute/', {
+                client_id: cid,
+                service_id: sid,
+                product_id: pid
+            })
+        }
+        function getProductImage(cid, sid, pid) {
+            return $.post('https://build.web.id/api/product/image/', {
+                client_id: cid,
+                service_id: sid,
+                product_id: pid
+            })
+        }
+
+        async function getCustomerById() {
+          let scid = await getClientServiceID()
+              customer_id = await getCustomer()
+
+          if(customer_id){
+            $.post('https://build.web.id/api/customers/getCustomerdatabyId/', {
+              client_id: scid.cid,
+              service_id: scid.layanan_id,
+              customer_id: customer_id
+            }).then(res => {
+                $('[data-login]').html(res.data.firstname+' '+res.data.lastname+' <b class="caret"></b>')
+                $('[data-account]').hide()
+            })
+
+            cid = window.atob(scid.cid),
+            sid = window.atob(scid.layanan_id),
+            $.post("https://build.web.id/api/cart/content/",{
+                "client_id": cid,
+                "service_id": sid,
+                "customer_id": customer_id
+            },function(data){
+                $('[count-cart]').text(data.count)
+            });
+          }else{
+            $('[data-login]').hide()
+            $('[data-account]').show()
+          }
+        }
+
+        async function loadToHTML() {
+            var
+                ssid = await getClientServiceID(),
+                cid = window.atob(ssid.cid),
+                sid = window.atob(ssid.layanan_id),
+                pid = getPIDFromUrl()
+                set_setting = await getConfigCurrency(ssid.cid, ssid.layanan_id),
+                product = await getProduct(cid, sid, pid)
+                spesification = await getProductAttribut(cid, sid, pid)
+                //product_spec = spesification.data.Technical.Spesification
+                image_arr = await getProductImage(cid, sid, pid)
+
+            if(set_setting.code=='IDR'){
+                price = parseInt(product.data.price).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+            }else{
+                price = (product.data.price/set_setting.value).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+            }
+
+            $('[data-qw-title]').text(product.data.name)
+            $('[data-qw-price]').text(set_setting.symbol_left+' '+price)
+            $('[data-qw-description]').html(product.data.description)
+            $('[data-qw-image]').attr('src', product.data.image)
+            //$('[data-qw-spesification]').html(product_spec)
+
+            image_arr = image_arr.data;
+            /*image_arr.forEach(images => {
+                let clone = $('[data-image-item]').clone(),
+                    modified_clone = clone.removeAttr('data-image-item');
+                    
+                modified_clone.find('[data-qw-image]').attr('src', images.image)
+                $('[data-image-container]').append(modified_clone)
+            })*/
+        }
+    </script>
+
+    <script>
+        // Check if this product favoritable
+        isThisFavorited().then(res => {
+            if (res) {
+                $('[data-wish]').find('i').attr('class', 'fa fa-heart')
+                $('[data-wish]').find('span').text('Favorited')
+            } else {
+                $('[data-wish]').find('i').attr('class', 'fa fa-heart-o')
+                $('[data-wish]').find('span').text('Save To Favorite')
+            }
+        })
+        // Cart button
+        $('[data-add]').click(function (e) {
+            saveCart()
+        })
+        // Favorite Button
+        $('[data-wish]').click(function (e) {
+            // add to wishlist
+            addwishlist().then(res => {
+                // if success 
+                if (res.status == true) {
+                    // change Icon and Text to Favorited
+                    $(this).find('i').attr('class', 'fa fa-heart')
+                    $(this).find('span').text('Favorited')
+                } else {
+                    // if respon false remove current favorite
+                    removewishlist().then(res => {
+                        //change Icon and Text to Save To Favorite
+                        $(this).find('i').attr('class', 'fa fa-heart-o')
+                        $(this).find('span').text('Save To Favorite')
+                    })
+                }
+            })
+        })
+        async function saveCart() {
+            let
+                scid = await getClientServiceID(),
+                cid = window.atob(scid.cid),
+                sid = window.atob(scid.layanan_id),
+                pid = parseInt(getPIDFromUrl()),
+                customer_id = await getCustomer()
+            
+            if(customer_id){
+                $.post('https://build.web.id/api/cart/add/', {
+                    client_id: cid,
+                    service_id: sid,
+                    customer_id: customer_id,
+                    product_id: pid,
+                }, function (res, status) {
+                    console.log(res, status)
+                    swal("Good job!", "Successfully Add To Cart!", "success")
+                }).fail(res => {
+                    console.log(res.responseText)
+                })
+            }else{
+                swal("Anda belum login!", "Silahkan login terlebih dahulu!", "info")
+                .then((value) => {
+                    window.location.href = "login.html";
+                });
+            }
+        }
+        async function addwishlist() {
+            let
+                scid = await getClientServiceID(),
+                cid = window.atob(scid.cid),
+                sid = window.atob(scid.layanan_id),
+                pid = parseInt(getPIDFromUrl()),
+                customer_id = await getCustomer()
+            return $.post('https://build.web.id/api/wishlist/add/', {
+                client_id: cid,
+                service_id: sid,
+                customer_id: customer_id, // Todo Ganti nanti ya
+                product_id: pid,
+            }).then(res => {
+                return res
+            })
+        }
+        async function removewishlist() {
+            let
+                scid = await getClientServiceID(),
+                cid = window.atob(scid.cid),
+                sid = window.atob(scid.layanan_id),
+                pid = parseInt(getPIDFromUrl()),
+                customer_id = await getCustomer()
+            return $.post('https://build.web.id/api/wishlist/remove/', {
+                client_id: cid,
+                service_id: sid,
+                customer_id: customer_id, // Todo Ganti nanti ya
+                product_id: pid,
+            }).then(res => {
+                return res
+            })
+        }
+        async function isThisFavorited() {
+            let
+                scid = await getClientServiceID(),
+                cid = window.atob(scid.cid),
+                sid = window.atob(scid.layanan_id),
+                pid = parseInt(getPIDFromUrl()),
+                customer_id = await getCustomer()
+            return $.post('https://build.web.id/api/wishlist/data/', {
+                client_id: cid,
+                service_id: sid,
+                customer_id: customer_id, // Todo Ganti nanti ya
+            }).then(res => {
+                let found = false
+                res.data.forEach(element => {
+                    if (element.product_id == pid) {
+                        found = true
+                    }
+                })
+                return found
+            })
+        }
+        function getCostumerID() {
+            return $.post('getdata.php')
+                .then(res => {
+                    return res
+                })
+        }
+        // Get Review ========================>
+        const getCountReview = async() => {
+            let
+                scid = await getClientServiceID(),
+                cid = window.atob(scid.cid),
+                sid = window.atob(scid.layanan_id),
+                pid = getPIDFromUrl()
+            return $.post('https://build.web.id/api/review/product/', {
+                client_id: cid,
+                service_id: sid,
+                product_id: pid
+            }).then(res => res.count)
+        }
+        // Ambil data dari server
+        const getReviews = async() => {
+            let
+                scid = await getClientServiceID(),
+                cid = window.atob(scid.cid),
+                sid = window.atob(scid.layanan_id),
+                pid = getPIDFromUrl()
+            return $.post('https://build.web.id/api/review/product/', {
+                client_id: cid,
+                service_id: sid,
+                product_id: pid
+            }).then(res => res.data)
+        }
+        const DEFAULT_ITEM = 'data-default-review'
+        const DEFAULT_ITEM_SELECTOR = '[data-default-review]'
+        const CONTAINER = 'data-container'
+        const CONTAINER_SELECTOR = '[data-container]'
+        async function LoadReviews() {
+            const
+                reviews = await getReviews(),
+                scid = await getClientServiceID(),
+                cid = window.atob(scid.cid),
+                sid = window.atob(scid.layanan_id),
+                pid = getPIDFromUrl(),
+                count = await getCountReview(),
+                customer_id = await getCustomer()
+
+            default_scid = {
+                client_id: cid,
+                service_id: sid
+            }
+            const setting_rating = {
+                theme: 'fontawesome-stars',
+                readonly: true
+            }
+            //console.log(reviews);
+            //console.log(reviews[0].review_id);
+            $(CONTAINER_SELECTOR).children().not(DEFAULT_ITEM_SELECTOR).remove()
+            $('[data-count-review]').text(count)
+            
+            reviews.forEach(review => {
+                let
+                    cloner = getCloner(),
+                    name = review.author,
+                    teks = review.text,
+                    rating = review.rating,
+                    date = review.date_added,
+                    id = review.review_id
+
+                cloner.find('[data-name]').text(name)
+                cloner.find('[data-date]').text(date)
+                cloner.find('[data-text]').html(teks)
+                cloner.find('[data-review-id]').text(id)
+                cloner.find('.qw-review').barrating(setting_rating)
+                cloner.find('.qw-review').barrating('set', rating)
+                // Event Listener
+                cloner.find('[data-delete-review]').click(e => {
+                    let id = cloner.find('[data-review-id]').text()
+                    var param_add = Object.assign({}, default_scid);
+                    param_add.review_id = id
+                    swal({
+                            title: "Are you sure?",
+                            text: "Once deleted, you will not be able to recover this review!",
+                            icon: "warning",
+                            buttons: true,
+                            dangerMode: true,
+                        })
+                        .then((willDelete) => {
+                            if (willDelete) {
+                                $.post('https://build.web.id/api/review/remove/', param_add,
+                                    function (res) {
+                                        if (res.status) {
+                                            swal("Poof! Your imaginary file has been deleted!", {
+                                                icon: "success",
+                                            })
+                                            let currentitem = $(e.target).closest('[data-item]')
+                                            currentitem.fadeOut(400)
+                                        }
+                                    })
+                            }
+                        })
+                })
+                var
+                    oldtext = "",
+                    oldrating = 0
+                cloner.find('[data-edit-review]').click(e => {
+                    let thisItem = $(e.target).closest('[data-item]')
+                    let text = thisItem.find('[data-text]').text()
+                    let rating = thisItem.find('.qw-review').val()
+                    thisItem.find('[data-text]').attr('contentEditable', true)
+                    thisItem.find('.qw-review').barrating('readonly', false)
+                    thisItem.find('[data-save-group]').show()
+                    thisItem.find('[data-text]').focus()
+                    
+                    oldtext = text
+                    oldrating = rating
+                })
+                cloner.find('[data-save-review]').click(e => {
+                    let thisItem = $(e.target).closest('[data-item]')
+                    let
+                        text = thisItem.find('[data-text]').text(),
+                        rating = thisItem.find('.qw-review').val(),
+                        review_id = cloner.find('[data-review-id]').text()
+                    let param_save = Object.assign({}, default_scid)
+                    param_save.product_id = pid
+                    param_save.text = text
+                    param_save.rating = rating
+                    param_save.customer_id = customer_id
+                    param_save.review_id = review_id
+                    $.post('https://build.web.id/api/review/update', param_save, function (res) {
+                            if (res.status) {
+                                thisItem.find('[data-text]').attr('contentEditable', false)
+                                thisItem.find('.qw-review').barrating('readonly', true)
+                                thisItem.find('[data-save-group]').hide()
+                            }
+                        })
+                        .done((res) => {
+                            if (res.status) {
+                                swal("Good job!", "Succesfully Update!", "success")
+                            }
+                        })
+                        .error(xhr => console.log(xhr))
+                })
+                cloner.find('[data-cancel-review]').click(e => {
+                    cloner.find('[data-text]').text(oldtext)
+                    cloner.find('.qw-review').barrating('set', oldrating)
+                    cloner.find('[data-text]').attr('contentEditable', false)
+                    cloner.find('.qw-review').barrating('readonly', true)
+                    cloner.find('[data-save-group]').hide()
+                })
+                $(CONTAINER_SELECTOR).append(cloner)
+            })
+            initilizingReview()
+        }
+        const getCloner = () => {
+            let clone = $(DEFAULT_ITEM_SELECTOR).clone()
+            return clone.removeAttr(DEFAULT_ITEM)
+        }
+        /**
+         * Change Normal select tag to Rating Star
+         * - type    : Side Effect 
+         * - Library : http://antenna.io/demo/jquery-bar-rating/examples/
+         **/
+        const initilizingReview = () => {
+            $('#qw-add-review-star').barrating({
+                theme: 'fontawesome-stars'
+            })
+        }
+        // Add Review ========================>
+        $('[data-add-button]').click(e => {
+            addReview()
+        })
+
+        async function addReview() {
+            let
+                scid = await getClientServiceID(),
+                cid = window.atob(scid.cid),
+                sid = window.atob(scid.layanan_id),
+                pid = getPIDFromUrl(),
+                customer_id = await getCustomer(),
+                teks = $('[data-teks-review]').val(),
+                rating = $('#qw-add-review-star').val()
+            
+            if(customer_id){
+                let name = await getNameCostumer()
+                $.post('https://build.web.id/api/review/add/', {
+                    client_id: cid,
+                    service_id: sid,
+                    customer_id: customer_id,
+                    product_id: pid,
+                    author: name,
+                    text: teks,
+                    rating: rating,
+                }, res => {
+                    if (res.status) {
+                        //swal("Good job!", "Review Succesfully Added!", "success")
+                        $('[data-teks-review]').val("")
+                        $('#qw-add-review-star').barrating('set', 1)
+                        LoadReviews()
+                    }
+                    //console.log(res)
+                })
+            }else{
+                swal("Anda belum login!", "Silahkan login terlebih dahulu!", "info")
+                .then((value) => {
+                    window.location.href = "login.html";
+                });
+            }
+            
+        }
+        async function getNameCostumer(id) {
+            let scid = await getClientServiceID(),
+                customer_id = await getCustomer()
+            return $.post('https://build.web.id/api/customers/getCustomerdatabyId/', {
+                client_id: scid.cid,
+                service_id: scid.layanan_id,
+                customer_id: customer_id,
+            }).then(res => {
+                //console.log(res)
+                return res.data.firstname
+            })
+        }
+
+        function getCustomer(){
+            return $.post('getdata.php').then(function(customer_id){
+                return customer_id
+            })
+        }
+
+        function getConfigCurrency(cid, sid){
+            return $.post('https://build.web.id/api/setting/getLocalSetting/', {
+                client_id: cid,
+                service_id: sid
+            }).then(res => {
+                return res.data.config_currency
+            })
+        }
+    </script>
+
+</body>
+
+</html>

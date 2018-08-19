@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- METAS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- TITLE -->
+    <title>Builder Template</title>
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="images/favicon.png"/>
+
+    <!-- LOAD MAIN CSS -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+    <!-- LOAD COLOR STYLE (OPTONAL) CSS -->
+    <link href="css/lunar.css" rel="stylesheet" type="text/css" id="colorstyle">
+
+    <!-- LOAD CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <!-- Preloader Start -->
+    <div id="preloader">
+        <i class="fa fa-spinner fa-spin preloader-animation" aria-hidden="true"></i>
+    </div>
+    <!-- Preloader End -->
+    
+    
+        <!-- HEADER START -->
+        <!--section id="header"-->
+        <!-- Fixed navbar -->
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="images/logo.png" alt="Edura - Multipurpose Website Template">
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav qw-list-item">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="bonus.html">Bonus</a></li>
+                        <li class="qw-list-default"><a href="gallery.html">Default</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-account>Account <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="sign-up.html">Sign Up</a></li>
+                                <li><a href="login.html">Login</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-login>My Account</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="account.html">My Account</a></li>
+                                <li><a href="change-pass.html">Change Password</a></li>
+                                <li><a href="address-book.html">Address Book</a></li>
+                                <li><a href="view-cart.html">List Cart</a></li>
+                                <li><a href="whistlist.html">Whist List</a></li>
+                                <li><a href="order-history.html">Order History</a></li>
+                                <li><a href="rewards-points.html">Rewads Points</a></li>
+                                <li><a href="transaction.html">Transaction</a></li>
+                                <li><a href="logout.php">Logout</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="view-cart.html"><i class="fa fa-shopping-cart"></i> (<span count-cart>0</span>)</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+    </header>
+        <!--/section-->
+        <!-- HEADER END -->
+
+    <!-- WRAPPER START -->
+    <div id="wrapper">
+        <!-- PAGE TITLE START -->
+        <section id="title" class="container-fluid wow fadeInDown">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <h1>List Cart</h1>
+                    </div>
+                    <div class="col-xs-6 text-right breadcrumbs">
+                        <ul class="list-inline list-unstyled">
+                            <li><a href="index.html">Home</a></li>
+                            <li>/</li>
+                            <li>List Cart</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- PAGE TITLE END -->
+
+
+        <!-- CONTENT START -->
+        <section id="sign-up" style="padding-top: 30px">
+            <div class="container" id="form-sign-up">
+                <div class="row">
+                    <div class="row">
+                <div class="col-sm-8">
+
+                        <style>
+                            [data-default] {
+                                display: none;
+                            }
+
+                            [data-item] [data-delete] {
+                                float: right;
+                                margin-right: 2em;
+                            }
+
+                            .qw-panel {
+                                width: 25vw;
+                                display: inline-block;
+                                float: right;
+                            }
+
+                            .qw-panel .panel-title {
+                                font-weight: bolder;
+                            }
+
+                            .qw-panel [data-checkout] {
+                                float: right;
+                                margin-bottom: 1em;
+                                margin-right: 1em;
+                            }
+
+                            .qw-panel .panel-body {
+                                font-size: 1.4em;
+                            }
+
+                            .qw-panel hr {
+                                margin: 1em;
+                                border-color: #4c4c4c;
+                            }
+                        </style>
+
+                    <div class="row" data-container>
+                        <div class="col-md-12 col-sm-12" data-item data-default>
+                            <span class="thumbnail text-center">
+                              <div class="row">
+                                <div class="col-sm-4">
+                                    <img src="http://placehold.it/350x280" alt="..." data-image="" class="col-sm-12">
+                                </div>
+                                <div class="col-sm-8" style="text-align: left;">
+                                    <h4 class="text-danger" data-title="">Toyota Fortuner</h4>
+
+                                    <p>Qty :
+                                        <input type="number" name="quantity" min="1" max="100" data-stock="">
+                                        <!--button data-update="">Update</button-->
+                                    </p>
+                                    <p>
+                                        Price Per Unit :
+                                        <span data-price-unit-curr="">10000</span>
+                                    </p>
+                                    <p>
+                                        Total Price :
+                                        <span data-price="">10000</span>
+                                        <span data-price-hitung="">10000</span>
+                                    </p>
+                                    <template data-pid></template>
+                                    <template data-price-unit></template>
+                                    <div class="row">
+                                        <!-- <div class="col-md-6 col-sm-6">
+                                            <button class="btn btn-primary right" data-checkout>Check Out</button>
+                                        </div> -->
+                                        <button class="btn btn-danger right" data-delete>Delete</button>
+                                    </div>
+                                </div>
+                              </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default qw-panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Detail Cart</h3>
+                        </div>
+                        <div class="panel-body">Total Price:
+                            <span data-total-price> </span>
+                        </div>
+                        <a href="checkout.html"><button class="btn btn-primary right" data-checkout="">Checkout</button>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+            <div class="space40"></div>
+        </section>
+        <!-- CONTENT END -->
+
+        <!-- FOOTER START -->
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="images/logo.png" alt="Logo - Web Builder Template"><br><br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. <b>Lorem ipsum dolor sit amet, consectetur adipiscing</b>.</p>
+                        <br>
+                        <ul class="list-unstyled list-inline social-icons">
+                            <li><a href="#" class="facebook"><i class="fa fa-facebook facebook"></i></a></li>
+                            <li><a href="#" class="twitter"><i class="fa fa-twitter twitter"></i></a></li>
+                            <li><a href="#" class="googleplus"><i class="fa fa-google-plus googleplus"></i></a></li>
+                            <li><a href="#" class="youtube"><i class="fa fa-youtube youtube"></i></a></li>
+                            <li><a href="#" class="linkedin"><i class="fa fa-linkedin linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>CONTACT US</h4>
+                        <p><i class="fa fa-map-pin fa-fw"></i> Graha Pos Indonesia Lantai 6 C, Jl.Banda no.30, Bandung 40115 -  Indonesia</p>
+                        <p><i class="fa fa-phone fa-fw"></i> 0804-1-808-888</p>
+                        <p><i class="fa fa-phone fa-fw"></i> +62 21 52905148</p>
+                        <p><i class="fa fa-envelope fa-fw"></i> info@qwords.com</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>PAGES</h4>
+                        <ul class="list-unstyled col-md-6">
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">HOME</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">PROFILE</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">CONTACT</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">PRODUCT</a></li>
+                        </ul>
+                        <ul class="list-unstyled col-md-6">
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">GALLERY</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">BONUS</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">OTHER</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>NEWSLETTER</h4>
+                        <p>Subscribe to our monthly newsletter and stay updated with the latest news and info.</p>
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-envelope-o"></i></div>
+                                    <input type="email_news" class="form-control" id="email_news" placeholder="Your Email Address" required>
+                                </div>
+                            </div>
+                            <div class="form-group pull-right">
+                                <button type="submit" class="btn btn-primary">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <hr>
+                    <div class="col-md-12 text-center bottom">
+                        <p>Copyright &copy; 2017 Web Builder. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- FOOTER END -->
+
+
+    </div>
+    <!-- WRAPPER END -->
+
+    <!-- back to top button -->
+    <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbo8AqPhlblo2nbndho2I8zLzr0o9Qs28"></script>
+    <script type="text/javascript" src="js/gmap.js"></script>
+
+    <!-- MAIN JS FILES REQUIRED ON ALL PAGES -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="vendor/SmoothScroll/SmoothScroll.min.js"></script>
+
+    <script src="vendor/waypoints/waypoints.min.js"></script>
+    <script src="vendor/counterup/jquery.counterup.min.js"></script>
+
+
+    <!-- HERO SLIDER-->
+    <script src="vendor/hero-slider/js/modernizr.js"></script>
+    <script src="vendor/hero-slider/js/main.js"></script>
+
+    <!-- OWL CAROUSEL -->
+    <script src="vendor/owl-carousel/owl.carousel.js"></script>
+
+    <!-- FILTERIZR -->
+    <script src="vendor/jquery/jquery.filterizr.js"></script>
+
+    <!-- EDURA JS REQUIRED ON ALL PAGES-->
+    <script src="js/edura.js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script>
+        $(function () {
+            loadCart()
+            getCustomerById()
+        })
+
+        function getClientServiceID() {
+            return $.post('scid.txt')
+                .then(res => {
+                    return JSON.parse(res)
+                })
+        }
+
+        async function getCustomerById() {
+          let scid = await getClientServiceID()
+              customer_id = await getCostumerID()
+
+          if(customer_id){
+            return $.post('https://build.web.id/api/customers/getCustomerdatabyId/', {
+              client_id: scid.cid,
+              service_id: scid.layanan_id,
+              customer_id: customer_id
+            }).then(res => {
+                $('[data-login]').html(res.data.firstname+' '+res.data.lastname+' <b class="caret"></b>')
+                $('[data-account]').hide()
+            })
+          }else{
+            $('[data-login]').hide()
+            $('[data-account]').show()
+          }
+        }
+
+        async function getCart() {
+            let
+                scid = await getClientServiceID(),
+                cid = window.atob(scid.cid),
+                sid = window.atob(scid.layanan_id),
+                co_id = await getCostumerID()
+
+            return $.post('https://build.web.id/api/cart/content/', {
+                    client_id: cid,
+                    service_id: sid,
+                    customer_id: co_id, // Todo Ganti nanti ya
+                })
+
+                .then(res => {
+                    $('[count-cart]').text(res.count)
+                    return res
+                })
+
+                .fail(res => {
+                    console.log(res.responseText)
+                })
+        }
+
+
+        async function getProducts() {
+            let cart = await getCart()
+            return cart.data
+        }
+
+        async function getTotalPrice() {
+            let cart = await getCart()
+            return cart.total
+        }
+
+        async function changeFormat(number){
+            let 
+                scid = await getClientServiceID(),
+                set_setting = await getConfigCurrency(scid.cid, scid.layanan_id)
+
+            if(set_setting.code=='IDR'){
+                number = parseInt(number).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+            }else{
+                number = (number/set_setting.value).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+            }
+
+            return set_setting.symbol_left+' '+number
+        }
+
+        async function updateCart(pid,stock){
+            let scid = await getClientServiceID(),
+                cid = window.atob(scid.cid),
+                sid = window.atob(scid.layanan_id),
+                customer_id = await getCostumerID()
+            
+            var req = $.post('https://build.web.id/api/cart/update/', {
+                "client_id": cid,
+                "service_id": sid,
+                "customer_id": customer_id, 
+                "product_id": pid,
+                "quantity": stock
+            }, function (res) { console.log(res.message)})
+        }
+
+        async function loadCart() {
+            let
+                products = await getProducts(),
+                total_price = await getTotalPrice(),
+                scid = await getClientServiceID(),
+                cid = window.atob(scid.cid),
+                sid = window.atob(scid.layanan_id),
+                co_id = await getCostumerID(),
+                set_setting = await getConfigCurrency(scid.cid, scid.layanan_id)
+
+            if(!co_id){
+                swal("Anda belum login!", "Silahkan login terlebih dahulu!", "info")
+                .then((value) => {
+                    window.location.href = "login.html";
+                });
+            }
+
+            // load price to html
+            $('[data-total-price]').text(await changeFormat(total_price))
+            $('[data-price-hitung]').hide()
+            
+            if(products.length==0){
+                $('[data-default]').show()
+                $('[data-default]').html('<div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">Product</h3></div><div class="panel-body">Belum ada product dalam list cart anda</div></div>')
+                $('[data-checkout]').attr('disabled',true)
+            }
+            // load product to html
+            products.forEach(async product => {
+                let
+                    clone = $('[data-default]').clone(),
+                    modified_clone = clone.removeAttr("data-default")
+
+                let
+                    image = product.product_detail.image,
+                    title = product.product_detail.name,
+                    price = product.total_price,
+                    stock = product.quantity,
+                    pid = product.product_detail.product_id,
+                    price_per_unit = product.product_detail.price
+                    //price_per_unit_curr = await changeFormat(product.product_detail.price)
+
+                    if(set_setting.code=='IDR'){
+                        price_per_unit_curr = parseInt(price_per_unit).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+                        set_price = parseInt(price).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+                    }else{
+                        price_per_unit_curr = parseInt(price_per_unit).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+                        set_price = (price/set_setting.value).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+                    }
+
+                modified_clone.find('[data-image]').attr('src', image)
+                modified_clone.find('[data-title]').html(title)
+                modified_clone.find('[data-price-hitung]').text(price)
+                modified_clone.find('[data-price]').text(set_setting.symbol_left+' '+set_price)
+                modified_clone.find('[data-price-unit]').text(price_per_unit)
+                modified_clone.find('[data-price-unit-curr]').text(set_setting.symbol_left+' '+price_per_unit_curr)
+                modified_clone.find('[data-stock]').val(stock)
+                modified_clone.find('[data-pid]').text(pid)
+
+
+                $('[data-container]').append(modified_clone)
+            })
+
+
+            $('[data-delete]').click(e => {
+                let
+                    container = $(e.target).closest('[data-item]'),
+                    pid = container.find('[data-pid]').text()
+
+                swal({
+                    title: "Are you sure?",
+                    text: "Once deleted, you will remove this product?",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                }).then((willDirect) => {
+                    if (willDirect) {
+                        var req = $.post('https://build.web.id/api/cart/remove/', {
+                            "client_id": cid,
+                            "service_id": sid,
+                            "customer_id": co_id, // Todo Ganti nanti ya
+                            "product_id": pid,
+                        }, function (res) {
+                            swal("Poof! Your product has been deleted!", {
+                              icon: "success",
+                            }).then((value) => {
+                                window.location.href = "view-cart.html";
+                            });
+                        })
+                    } else {
+                        swal("Your product is safe!");
+                    }
+                });
+            })
+
+            /*$('[data-update]').click(e => {
+
+                let
+                    container = $(e.target).closest('[data-item]'),
+                    pid = container.find('[data-pid]').text(),
+                    stock = container.find('[data-stock]').val(),
+                    qty = stock
+
+                var req = $.post('https://build.web.id/api/cart/update/', {
+
+                    "client_id": cid,
+                    "service_id": sid,
+                    "customer_id": co_id, // Todo Ganti nanti ya
+                    "product_id": pid,
+                    "quantity": stock
+
+
+                }, function (res) {
+                    console.log(res)
+                    alert(res.message)
+                })
+
+            })*/
+
+            $('[data-stock]').unbind().change(async function (e) {
+                    let
+                        thisDataItem = $(this).closest('[data-item]'),
+                        price_per_unit = parseInt(thisDataItem.find('[data-price-unit]').text()),
+                        currentPrice = $(this).val() * price_per_unit,
+                        total_price_new = 0,
+                        siblings = thisDataItem.siblings().not('[data-default]'),
+                        scid = await getClientServiceID(),
+                        set_setting = await getConfigCurrency(scid.cid,scid.layanan_id),
+                        pid = thisDataItem.find('[data-pid]').text(),
+                        stock = thisDataItem.find('[data-stock]').val()
+                    
+                    let arrayofprice = $.map(siblings, function (sibling, index) {
+                        return $(sibling).find('[data-price-hitung]').text()
+                    })
+                    const reducer = (accumulator, currentValue) => parseInt(accumulator) + parseInt(
+                        currentValue);
+                    
+                    let sum = arrayofprice.reduce(reducer)
+                    total_price_new = currentPrice + parseInt(sum);
+
+                    updateCart(pid,stock)
+
+                    thisDataItem.find('[data-price]').text(await changeFormat(currentPrice))
+                    $('[data-total-price]').text(await changeFormat(total_price_new))
+            })
+
+            async function requestCart(e, action) {
+                let
+                    container = $(e.target).closest('[data-item]'),
+                    pid = container.find('[data-pid]').text(),
+                    scid = await getClientServiceID(),
+                    cid = window.atob(scid.cid),
+                    sid = window.atob(scid.layanan_id),
+                    qty = 0,
+                    co_id = await getCostumerID(),
+                    msg = ""
+
+
+                switch (action) {
+                    case "delete":
+                        qty = 0
+                        msg = "Deleted"
+                        break;
+
+                    case "update":
+                        let stock = container.find('[data-stock]').val()
+                        qty = stock
+                        msg = "Updated"
+                        break;
+
+                    default:
+                        qty = 0
+                        msg = "none"
+                        break;
+                }
+
+                let data = {
+
+                    "client_id": cid,
+                    "service_id": sid,
+                    "customer_id": co_id, // Todo Ganti nanti ya
+                    "product_id": pid,
+                    "quantity": qty,
+
+                }
+
+                // do request
+                var req = $.post('https://build.web.id/api/cart/add/', data, function (res) {
+                    alert("Product " + msg)
+                    location.reload()
+                })
+            }
+
+        }
+
+        function getCostumerID() {
+            return $.post('getdata.php')
+                .then(res => {
+                    return res
+                })
+        }
+
+        function getConfigCurrency(cid, sid){
+            return $.post('https://build.web.id/api/setting/getLocalSetting/', {
+                client_id: cid,
+                service_id: sid
+            }).then(res => {
+                return res.data.config_currency
+            })
+        }
+    </script>
+
+</body>
+</html>

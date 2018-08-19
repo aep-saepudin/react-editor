@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Website Builder Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<header>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <img src="user-image/logo.png">
+                <!--button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Logo</a-->
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right qw-list-item">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="profile.html">Profile</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li class="active">
+                        <a href="product.html">Product</a>
+                    </li>
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="bonus.html">Bonus</a>
+                    </li>
+                    <li class="qw-list-default">
+                        <a href="default.html">Default</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-account>Account <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="sign-up.html">Sign Up</a>
+                            </li>
+                            <li>
+                                <a href="login.html">Login</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-login>My Account <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="account.html">My Account</a>
+                            </li>
+                            <li>
+                                <a href="change-pass.html">Change Password</a>
+                            </li>
+                            <li>
+                                <a href="address-book.html">Address Book</a>
+                            </li>
+                            <li>
+                                <a href="view-cart.html">List Cart</a>
+                            </li>
+                            <li>
+                                <a href="whistlist.html">Whist List</a>
+                            </li>
+                            <li>
+                                <a href="order-history.html">Order History</a>
+                            </li>
+                            <li>
+                                <a href="rewards-points.html">Rewards Points</a>
+                            </li>
+                            <li>
+                                <a href="transactions.html">Transactions</a>
+                            </li>
+                            <li>
+                                <a href="logout.php">Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="view-cart.html">
+                            <i class="fa fa-shopping-cart"></i> (<span count-cart>0</span>)
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        <!-- /.container -->
+    </nav>
+</header>
+
+    <section id="product">
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Product
+                    <small>Subheading</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li class="active">Product</li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <div>
+            <div class="form-group">
+                <label>Search Product</label>
+                <input type="text" class="form-control" style="
+                display: inline-block;
+                width: 80%;
+                margin-left: 2em;
+                margin-right: 1em;
+            " data-text-search>
+                <button type="submit" class="btn btn-default" data-search="">Search</button>
+            </div>
+        </div>
+
+        <div> Filter By:
+            <div class="radio">
+                <label>
+                    <input type="radio" name="filter" value="pd.name" checked="">Name</label>
+                <label>
+                    <input type="radio" name="filter" value="p.price">Price</label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="orderby" value="ASC" checked="">Ascending</label>
+                <label>
+                    <input type="radio" name="orderby" value="DESC">Descending</label>
+            </div>
+        </div>
+        <input type="hidden" id="rowpage" name="rowpage" value="0" data-text-row-page>
+        <br>
+
+        <!-- Product Row -->
+        <div class="row" data-product-container>
+    
+        <!-- BEGIN PRODUCTS -->
+        <div class="col-md-3 col-sm-6" data-default-item>
+            <span class="thumbnail">
+                <div style="position: relative; width: 100%; height:200px; padding-right: 10px; margin-right: 10px;">
+                    <center><img src="https://s12.postimg.org/41uq0fc4d/item_2_180x200.png" alt="..." data-image class="img-responsive" style="max-height: 200px"></center>
+                </div>
+                <h4 data-title style="height: 50px">Product Tittle</h4>
+                <div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <!--p data-short-desc></p-->
+                <h5 data-price></h5>
+                <hr class="line">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <center>
+                        <button data-add="" class="btn btn-white btn-primary"><i class="fa fa-shopping-cart ui-droppable"></i> Add To Cart</button>
+                        <a href="" data-link>
+                            <button class="btn btn-primary right"> VIEW ITEM</button>
+                        </a>
+                        </center>
+                    </div>
+                </div>
+            </span>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <span class="thumbnail">
+                <img src="https://s12.postimg.org/655583bx9/item_1_180x200.png" alt="...">
+                <h4>Product Tittle</h4>
+                <div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <hr class="line">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p class="price">$29,90</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                     <a href="product-detail.html" target="_blank" >  <button class="btn btn-primary right" > VIEW ITEM</button></a>
+                    </div>
+                    
+                </div>
+            </span>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <span class="thumbnail">
+                <img src="https://s12.postimg.org/5w7ki5z4t/item_4_180x200.png" alt="...">
+                <h4>Product Tittle</h4>
+                <div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <hr class="line">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p class="price">$29,90</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                     <a href="product-detail.html" target="_blank" >  <button class="btn btn-primary right" > VIEW ITEM</button></>
+                    </div>
+                    
+                </div>
+            </span>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <span class="thumbnail">
+                <img src="https://s12.postimg.org/dawwajl0d/item_3_180x200.png" alt="...">
+                <h4>Product Tittle</h4>
+                <div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <hr class="line">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p class="price">$29,90</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                     <a href="product-detail.html" target="_blank" >  <button class="btn btn-primary right" > VIEW ITEM</button></a>
+                    </div>
+                    
+                </div>
+            </span>
+        </div>
+        
+        <div class="col-md-3 col-sm-6">
+            <span class="thumbnail">
+                <img src="https://s12.postimg.org/41uq0fc4d/item_2_180x200.png" alt="...">
+                <h4>Product Tittle</h4>
+                <div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <hr class="line">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p class="price">$29,90</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                     <a href="product-detail.html" target="_blank" >  <button class="btn btn-primary right" > VIEW ITEM</button></a>
+                    </div>
+                    
+                </div>
+            </span>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <span class="thumbnail">
+                <img src="https://s12.postimg.org/655583bx9/item_1_180x200.png" alt="...">
+                <h4>Product Tittle</h4>
+                <div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <hr class="line">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p class="price">$29,90</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                     <a href="product-detail.html" target="_blank" >  <button class="btn btn-primary right" > VIEW ITEM</button></a>
+                    </div>
+                    
+                </div>
+            </span>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <span class="thumbnail">
+                <img src="https://s12.postimg.org/5w7ki5z4t/item_4_180x200.png" alt="...">
+                <h4>Product Tittle</h4>
+                <div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <hr class="line">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p class="price">$29,90</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                     <a href="product-detail.html" target="_blank" >  <button class="btn btn-primary right" > VIEW ITEM</button></a>
+                    </div>
+                    
+                </div>
+            </span>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <span class="thumbnail">
+                <img src="https://s12.postimg.org/dawwajl0d/item_3_180x200.png" alt="...">
+                <h4>Product Tittle</h4>
+                <div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <hr class="line">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p class="price">$29,90</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                 <a href="product-detail.html" target="_blank" >  <button class="btn btn-primary right" > VIEW ITEM</button></a>
+                    </div>
+                    
+                </div>
+            </span>
+        </div>
+        
+        <div class="col-md-3 col-sm-6">
+            <span class="thumbnail">
+                <img src="https://s12.postimg.org/41uq0fc4d/item_2_180x200.png" alt="...">
+                <h4>Product Tittle</h4>
+                <div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <hr class="line">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p class="price">$29,90</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                     <a href="product-detail.html" target="_blank" >  <button class="btn btn-primary right" > VIEW ITEM</button></a>
+                    </div>
+                    
+                </div>
+            </span>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <span class="thumbnail">
+                <img src="https://s12.postimg.org/655583bx9/item_1_180x200.png" alt="...">
+                <h4>Product Tittle</h4>
+                <div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <hr class="line">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p class="price">$29,90</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                     <a href="product-detail.html" target="_blank" >  <button class="btn btn-primary right" > VIEW ITEM</button></a>
+                    </div>
+                    
+                </div>
+            </span>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <span class="thumbnail">
+                <img src="https://s12.postimg.org/5w7ki5z4t/item_4_180x200.png" alt="...">
+                <h4>Product Tittle</h4>
+                <div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <hr class="line">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p class="price">$29,90</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                     <a href="product-detail.html" target="_blank" >  <button class="btn btn-primary right" > VIEW ITEM</button></a>
+                    </div>
+                    
+                </div>
+            </span>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <span class="thumbnail">
+                <img src="https://s12.postimg.org/dawwajl0d/item_3_180x200.png" alt="...">
+                <h4>Product Tittle</h4>
+                <div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <hr class="line">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p class="price">$29,90</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                     <a href="product-detail.html" target="_blank" >  <button class="btn btn-primary right" > VIEW ITEM</button></a>
+                    </div>
+                    
+                </div>
+            </span>
+        </div>
+        
+        
+        <div class="col-md-3 col-sm-6">
+            <span class="thumbnail">
+                <img src="https://s12.postimg.org/41uq0fc4d/item_2_180x200.png" alt="...">
+                <h4>Product Tittle</h4>
+                <div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <hr class="line">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p class="price">$29,90</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                     <a href="product-detail.html" target="_blank" >  <button class="btn btn-primary right" > VIEW ITEM</button></a>
+                    </div>
+                    
+                </div>
+            </span>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <span class="thumbnail">
+                <img src="https://s12.postimg.org/655583bx9/item_1_180x200.png" alt="...">
+                <h4>Product Tittle</h4>
+                <div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <hr class="line">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p class="price">$29,90</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                     <a href="product-detail.html" target="_blank" >  <button class="btn btn-primary right" > VIEW ITEM</button></a>
+                    </div>
+                    
+                </div>
+            </span>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <span class="thumbnail">
+                <img src="https://s12.postimg.org/5w7ki5z4t/item_4_180x200.png" alt="...">
+                <h4>Product Tittle</h4>
+                <div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <hr class="line">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p class="price">$29,90</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                     <a href="product-detail.html" target="_blank" >  <button class="btn btn-primary right" > VIEW ITEM</button></a>
+                    </div>
+                    
+                </div>
+            </span>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <span class="thumbnail">
+                <img src="https://s12.postimg.org/dawwajl0d/item_3_180x200.png" alt="...">
+                <h4>Product Tittle</h4>
+                <div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <hr class="line">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p class="price">$29,90</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                     <a href="product-detail.html" target="_blank" >  <button class="btn btn-primary right" > VIEW ITEM</button></a>
+                    </div>
+                    
+                </div>
+            </span>
+        </div>
+        
+        
+        <div class="col-md-3 col-sm-6">
+            <span class="thumbnail">
+                <img src="https://s12.postimg.org/41uq0fc4d/item_2_180x200.png" alt="...">
+                <h4>Product Tittle</h4>
+                <div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <hr class="line">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p class="price">$29,90</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                     <a href="product-detail.html" target="_blank" >  <button class="btn btn-primary right" > VIEW ITEM</button></a>
+                    </div>
+                    
+                </div>
+            </span>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <span class="thumbnail">
+                <img src="https://s12.postimg.org/655583bx9/item_1_180x200.png" alt="...">
+                <h4>Product Tittle</h4>
+                <div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <hr class="line">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p class="price">$29,90</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                     <a href="product-detail.html" target="_blank" >  <button class="btn btn-primary right" > VIEW ITEM</button></a>
+                    </div>
+                    
+                </div>
+            </span>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <span class="thumbnail">
+                <img src="https://s12.postimg.org/5w7ki5z4t/item_4_180x200.png" alt="...">
+                <h4>Product Tittle</h4>
+                <div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <hr class="line">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p class="price">$29,90</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                     <a href="product-detail.html" target="_blank" >  <button class="btn btn-primary right" > VIEW ITEM</button></a>
+                    </div>
+                    
+                </div>
+            </span>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <span class="thumbnail">
+                <img src="https://s12.postimg.org/dawwajl0d/item_3_180x200.png" alt="...">
+                <h4>Product Tittle</h4>
+                <div class="ratings">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <hr class="line">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p class="price">$29,90</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                     <a href="product-detail.html" target="_blank" >  <button class="btn btn-primary right" > VIEW ITEM</button></a>
+                    </div>
+                    
+                </div>
+            </span>
+        </div>
+        <!-- END PRODUCTS -->
+        </div>
+            <center><div class="pagination" tampilkan-data></div></center>
+        <br>
+    </div>
+    <!-- /.container -->
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-bs">
+        <div class="row">
+            <div class="col-md-3 footer-brand animated fadeInLeft">
+                <img src="user-image/logo.png">
+                <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut sem.</p>
+                <p>© 2017 World, All rights reserved</p>
+            </div>
+            <div class="col-md-3 footer-nav animated fadeInUp">
+                <h4>Menu —</h4>
+                <ul class="pages">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Profile</a></li>
+                     <li><a href="#">Contact</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-social animated fadeInDown">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">RSS</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-ns animated fadeInRight">
+                <h4>Contact</h4>
+                <p>
+                    3481 Melrose Place<br>Beverly Hills, CA 90210<br>
+                </p>
+                <p><i class="fa fa-phone"></i> 
+                    <abbr title="Phone">P</abbr>: (123) 456-7890</p>
+                <p><i class="fa fa-envelope-o"></i> 
+                    <abbr title="Email">E</abbr>: <a href="mailto:name@example.com">name@example.com</a>
+                </p>
+                <p><i class="fa fa-clock-o"></i> 
+                    <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Wow JS -->
+    <script src="js/wow.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/costume.js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <style>
+        [data-default-item] {
+            display: none;
+        }
+    </style>
+
+    <script>
+        $(function () {
+            loadproduct()
+            getCustomerById()
+            getCart()
+
+            //tambah tombol search
+            $('[data-search]').click(function () {
+                loadproduct()
+            })
+
+            // input change
+            $('.radio input').change(function (e) {
+                loadproduct()
+            })
+
+        })
+
+        async function getCustomerById() {
+          let scid = await getClientServiceID()
+              customer_id = await getCustomer()
+
+          if(customer_id){
+            return $.post('https://build.web.id/api/customers/getCustomerdatabyId/', {
+              client_id: scid.cid,
+              service_id: scid.layanan_id,
+              customer_id: customer_id
+            }).then(res => {
+                $('[data-login]').html(res.data.firstname+' '+res.data.lastname+' <b class="caret"></b>')
+                $('[data-account]').hide()
+            })
+          }else{
+            $('[data-login]').hide()
+            $('[data-account]').show()
+          }
+        }
+
+        async function getCart() {
+            let
+                scid = await getClientServiceID(),
+                cid = window.atob(scid.cid),
+                sid = window.atob(scid.layanan_id),
+                co_id = await getCustomer()
+
+            return $.post('https://build.web.id/api/cart/content/', {
+                client_id: cid,
+                service_id: sid,
+                customer_id: co_id, // Todo Ganti nanti ya
+            })
+
+            .then(res => {
+                $('[count-cart]').text(res.count)
+            })
+
+            .fail(res => {
+                console.log(res.responseText)
+            })
+        }
+
+        async function loadproduct() {
+            var
+                scid = await getClientServiceID()
+                cid = window.atob(scid.cid),
+                sid = window.atob(scid.layanan_id),
+                set_setting = await getConfigCurrency(scid.cid, scid.layanan_id),
+
+            // delete html
+            $('[data-product-container]')
+                .children()
+                .not('[data-default-item]')
+                .remove()
+
+            let name = $('[data-text-search]').val()
+            let filter = $('[name="filter"]:checked').val()
+            let sort = $('[name="orderby"]:checked').val()
+            let page = $('[data-text-row-page]').val()
+            let limit = 12
+            let prod = await getProduct(cid, sid, name, filter, sort, '', '')
+            let products = await getProduct(cid, sid, name, filter, sort, page, limit)
+
+            jumlah_product = products.length
+            jumlah_page = Math.ceil(prod.length/limit, 1)
+            
+            //tampilkan paging product
+            $('[tampilkan-data]').html(makePaging(jumlah_page,page))
+
+            products.forEach(product => {
+                let
+                    clone = $('[data-default-item]').clone(),
+                    modified_clone = clone.removeAttr('data-default-item'),
+                    short_desc = product.description.substring(0, 50),
+                    link = `./product-detail.html?pid=${product.product_id}`
+                    if(set_setting.code=='IDR'){
+                        price = parseInt(product.price).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+                    }else{
+                        price = (product.price/set_setting.value).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+                    }
+                    
+                modified_clone.find('[data-image]').attr('src', product.image)
+                modified_clone.find('[data-title]').html(product.name)
+                modified_clone.find('[data-price]').text(set_setting.symbol_left+' '+price)
+                modified_clone.find('[data-short-desc]').html(short_desc)
+                modified_clone.find('[data-link]').attr('href', link)
+                modified_clone.find('[data-add]').attr('onclick','saveCart('+product.product_id+')');
+
+                $('[data-product-container]').append(modified_clone)
+            })
+
+        }
+
+        async function saveCart(product_id) {
+            let
+                scid = await getClientServiceID(),
+                cid = window.atob(scid.cid),
+                sid = window.atob(scid.layanan_id),
+                pid = parseInt(product_id),
+                customer_id = await getCustomer()
+
+            if(customer_id){
+                $.post('https://build.web.id/api/cart/add/', {
+                    client_id: cid,
+                    service_id: sid,
+                    customer_id: customer_id,
+                    product_id: pid,
+                }, function (res, status) {
+                    if(res.status==false){
+                        swal("Product not found!", "Silahkan pilih product!", "info")
+                        .then((value) => {
+                          window.location.href = "product.html";
+                        });
+                    }else{
+                       swal("Cart add!", "Successfully Add To Cart!", "success") 
+                    }
+                }).fail(res => {
+                    console.log(res.responseText)
+                })
+            }else{
+                swal("Anda belum login!", "Silahkan login terlebih dahulu!", "info")
+                .then((value) => {
+                    window.location.href = "login.html";
+                });
+            }
+        }
+
+        function getCustomer(){
+            return $.post('getdata.php').then(function(customer_id){
+                return customer_id
+            })
+        }
+
+        function getClientServiceID() {
+            return $.post('scid.txt')
+                .then(res => {
+                    return JSON.parse(res)
+                })
+        }
+
+        // Change : perubahan ada disini
+        function getProduct(cid, sid, name, filter, sort, page, limit) {
+            if(page==0){
+                start = 0;
+            }else{
+                start = page*limit;
+            }
+            
+            let data = {
+                client_id: cid,
+                service_id: sid,
+                filter_name: name,
+                sort: filter,
+                order: sort,
+                start: start,
+                limit: limit
+            }
+            
+            return $.post('https://build.web.id/api/product/data/', data).then(res => {
+                return res.data
+            })
+        }
+
+        function getConfigCurrency(cid, sid){
+            return $.post('https://build.web.id/api/setting/getLocalSetting/', {
+                client_id: cid,
+                service_id: sid
+            }).then(res => {
+                return res.data.config_currency
+            })
+        }
+
+        function makePaging(totalPages, pageIndex) {
+            var oPaging, i, j, k;
+            var totalPages = parseInt(totalPages);
+
+            pageIndex++;
+
+            i = pageIndex;
+            j = pageIndex - 1;
+            k = pageIndex + 1;
+
+            var oBefore, oAfter;
+            oBefore = "";
+            oAfter = "";
+
+            while (j != 0 && j != i - 6) {
+                oBefore = "<a class='Page' onClick='changePage("+(j-1)+")' data-index='"+(j-1)+"'>"+j+"</a>&nbsp;"+oBefore;
+                j--;
+            }
+
+            for (; k < totalPages + 1 && k < i + 6; k++) {
+                oAfter += "<a class='Page' onClick='changePage("+(k-1)+")' data-index='"+(k-1)+"'>"+k+"</a>&nbsp;";
+            }
+
+            oPaging = oBefore + "<a class='CurPage' href='#' rel='' style='color:Red;'>" + i.toString() + "</a>&nbsp;" + oAfter;
+            return oPaging;
+        }
+
+        function changePage(page){
+            $('[data-text-row-page]').val(page)
+            loadproduct()
+        }
+    </script>
+
+</body>
+<style type="text/css">
+    .pagination {
+        display: inline-block;
+    }
+
+    .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        border: 1px solid #ddd;
+    }
+
+    .pagination a.active {
+        background-color: #4CAF50;
+        color: white;
+        border: 1px solid #4CAF50;
+    }
+
+    .pagination a:hover:not(.active) {background-color: #ddd;}
+
+    .pagination a:first-child {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    .pagination a:last-child {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+</style>
+
+</html>

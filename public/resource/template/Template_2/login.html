@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- METAS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- TITLE -->
+    <title>Builder Template</title>
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="images/favicon.png"/>
+
+    <!-- LOAD MAIN CSS -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+    <!-- LOAD COLOR STYLE (OPTONAL) CSS -->
+    <link href="css/lunar.css" rel="stylesheet" type="text/css" id="colorstyle">
+
+    <!-- LOAD CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet" type="text/css">
+    <!--style type="text/css">
+        #login {
+            height: 10em;
+            position: relative 
+        }
+        .row {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%) 
+        }
+    </style-->
+
+</head>
+
+<body>
+    <!-- Preloader Start -->
+    <div id="preloader">
+        <i class="fa fa-spinner fa-spin preloader-animation" aria-hidden="true"></i>
+    </div>
+    <!-- Preloader End -->
+
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="images/logo.png" alt="Edura - Multipurpose Website Template">
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav qw-list-item">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="bonus.html">Bonus</a></li>
+                        <li class="qw-list-default"><a href="default.html">Default</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-account>Account <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="sign-up.html">Sign Up</a></li>
+                                <li><a href="login.html">Login</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-login>My Account</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="account.html">My Account</a></li>
+                                <li><a href="change-pass.html">Change Password</a></li>
+                                <li><a href="address-book.html">Address Book</a></li>
+                                <li><a href="view-cart.html">List Cart</a></li>
+                                <li><a href="whistlist.html">Whist List</a></li>
+                                <li><a href="order-history.html">Order History</a></li>
+                                <li><a href="rewards-points.html">Rewads Points</a></li>
+                                <li><a href="transaction.html">Transaction</a></li>
+                                <li><a href="logout.php">Logout</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="view-cart.html"><i class="fa fa-shopping-cart"></i> (<span count-cart>0</span>)</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+    </header>
+
+    <!-- WRAPPER START -->
+    <div id="wrapper">
+        <!-- PAGE TITLE START -->
+        <section id="title" class="container-fluid wow fadeInDown">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <h1>Login</h1>
+                    </div>
+                    <div class="col-xs-6 text-right breadcrumbs">
+                        <ul class="list-inline list-unstyled">
+                            <li><a href="index.html">Home</a></li>
+                            <li>/</li>
+                            <li>Login</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- PAGE TITLE END -->
+
+        <!-- CONTENT START -->
+        <section id="login">
+            <div class="container" style="width: 50%; padding-top: 100px; padding-bottom: 100px;">
+                <div class="row" style="top: 50%; left: 50%;">
+                        <div class="col-md-12">
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Email Address</label>
+                                    <input type="email" class="form-control" id="email" name="email" required data-validation-required-message="Please enter your email address.">
+                                </div>
+                            </div>
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control" id="password" name="password" required data-validation-required-message="Please enter your password.">
+                                </div>
+                            </div>
+                            <div id="success"></div>
+                            <!-- For success/fail messages -->
+                            <button class="btn btn-primary" id="btn-login">Login</button>
+                            <br><br>
+                            <div><a href="forgot-pass.html">Forgot Password</a></div>
+                        </div>
+                </div>
+            </div>
+            <div class="space40"></div>
+        </section>
+        <!-- CONTENT END -->
+
+        <!-- FOOTER START -->
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="images/logo.png" alt="Logo - Web Builder Template"><br><br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. <b>Lorem ipsum dolor sit amet, consectetur adipiscing</b>.</p>
+                        <br>
+                        <ul class="list-unstyled list-inline social-icons">
+                            <li><a href="#" class="facebook"><i class="fa fa-facebook facebook"></i></a></li>
+                            <li><a href="#" class="twitter"><i class="fa fa-twitter twitter"></i></a></li>
+                            <li><a href="#" class="googleplus"><i class="fa fa-google-plus googleplus"></i></a></li>
+                            <li><a href="#" class="youtube"><i class="fa fa-youtube youtube"></i></a></li>
+                            <li><a href="#" class="linkedin"><i class="fa fa-linkedin linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>CONTACT US</h4>
+                        <p><i class="fa fa-map-pin fa-fw"></i> Graha Pos Indonesia Lantai 6 C, Jl.Banda no.30, Bandung 40115 -  Indonesia</p>
+                        <p><i class="fa fa-phone fa-fw"></i> 0804-1-808-888</p>
+                        <p><i class="fa fa-phone fa-fw"></i> +62 21 52905148</p>
+                        <p><i class="fa fa-envelope fa-fw"></i> info@qwords.com</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>PAGES</h4>
+                        <ul class="list-unstyled col-md-6">
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">HOME</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">PROFILE</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">CONTACT</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">PRODUCT</a></li>
+                        </ul>
+                        <ul class="list-unstyled col-md-6">
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">GALLERY</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">BONUS</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">OTHER</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>NEWSLETTER</h4>
+                        <p>Subscribe to our monthly newsletter and stay updated with the latest news and info.</p>
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-envelope-o"></i></div>
+                                    <input type="email" class="form-control" id="email_news" placeholder="Your Email Address" required>
+                                </div>
+                            </div>
+                            <div class="form-group pull-right">
+                                <button type="submit" class="btn btn-primary">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <hr>
+                    <div class="col-md-12 text-center bottom">
+                        <p>Copyright &copy; 2017 Web Builder. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- FOOTER END -->
+
+
+    </div>
+    <!-- WRAPPER END -->
+
+    <!-- back to top button -->
+    <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbo8AqPhlblo2nbndho2I8zLzr0o9Qs28"></script>
+    <script type="text/javascript" src="js/gmap.js"></script>
+
+    <!-- MAIN JS FILES REQUIRED ON ALL PAGES -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="vendor/SmoothScroll/SmoothScroll.min.js"></script>
+
+    <script src="vendor/waypoints/waypoints.min.js"></script>
+    <script src="vendor/counterup/jquery.counterup.min.js"></script>
+
+
+    <!-- HERO SLIDER-->
+    <script src="vendor/hero-slider/js/modernizr.js"></script>
+    <script src="vendor/hero-slider/js/main.js"></script>
+
+    <!-- OWL CAROUSEL -->
+    <script src="vendor/owl-carousel/owl.carousel.js"></script>
+
+    <!-- FILTERIZR -->
+    <script src="vendor/jquery/jquery.filterizr.js"></script>
+
+    <!-- EDURA JS REQUIRED ON ALL PAGES-->
+    <script src="js/edura.js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            jQuery.get('scid.txt', function(value) {
+                var obj = JSON.parse(value);
+                $.post('getdata.php',function(customer_id){
+                    if(customer_id){
+                        $.post("https://build.web.id/api/customers/getCustomerdatabyId/",{
+                            "client_id": obj.cid,
+                            "service_id": obj.layanan_id,
+                            "customer_id": customer_id
+                        },function(data){
+                            firstname = data.data.firstname;
+                            lastname = data.data.lastname;
+                            $('[data-login]').html(firstname+' '+lastname+' <b class="caret"></b>')
+                            $('[data-account]').hide()
+                        }); 
+
+                        cid = window.atob(obj.cid),
+                        sid = window.atob(obj.layanan_id),
+                        $.post("https://build.web.id/api/cart/content/",{
+                            "client_id": cid,
+                            "service_id": sid,
+                            "customer_id": customer_id
+                        },function(data){
+                            $('[count-cart]').text(data.count)
+                        });
+                    }else{
+                        $('[data-login]').hide()
+                        $('[data-account]').show()
+                    }
+                });
+            });
+                
+            $('#btn-login').click(function(){
+                var email = $('#email').val();
+                var password = $('#password').val();
+
+                jQuery.get('scid.txt', function(value) {
+                    var obj = JSON.parse(value);
+                    $.post("https://build.web.id/api/customers/login/",{
+                        "client_id": obj.cid,
+                        "service_id": obj.layanan_id,
+                        "email": email,
+                        "password": password
+                    },
+                    function(data){
+                        var msg = data.msg;
+                        if(data.status==false){
+                            swal("Warning!", msg, "error");
+                        }else{ 
+                            $.post('data.php ',{
+                                "customer_id": data.data.customer_id
+                            },
+                            function(data){
+                                swal("Success", msg, "success")
+                                .then((value) => {
+                                    window.location.href = "index.html";
+                                });
+                            }); 
+                        }
+                    });
+                });   
+            });
+        });
+    </script>
+
+</body>
+</html>
